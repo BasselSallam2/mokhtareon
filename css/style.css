@@ -114,6 +114,18 @@ textarea
     /* inherit font from html/body */
 }
 
+/* SEO intro (visible keyword context for crawlers) */
+.seo-intro
+{
+    font-size: clamp(0.875rem, 1.1vw, 1rem);
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 42rem;
+    line-height: 1.65;
+    opacity: 0.92;
+}
+
 /* ── Hero CONTAINERS ───────────────────────────────────────────────────── */
 
 header

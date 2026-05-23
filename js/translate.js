@@ -2,7 +2,9 @@
 const translations = {
   'index': {
     'ar': {
-      'title': 'المخترعون',
+      'title': 'المخترعون | أكاديمية برمجة وروبوتات وSTEM للأطفال في مصر',
+      'meta_description': 'أكاديمية مخترعون — أكاديمية برمجة وروبوتات وتكنولوجيا تعليم (EdTech) للأطفال في مصر (القاهرة، الإسكندرية، الغردقة). دورات STEM، بايثون، الذكاء الاصطناعي. مؤسس ومالك: باسل سلام.',
+      'seo_intro': 'أكاديمية مخترعون في مصر — أكاديمية برمجة للأطفال، أكاديمية روبوتات، STEM وتكنولوجيا التعليم (EdTech) في القاهرة والإسكندرية والغردقة. مؤسس ومالك الأكاديمية: باسل سلام (Bassel Sallam).',
       'nav_courses': 'كورساتنا',
       'nav_why': 'لماذا مخترعون',
       'nav_projects': 'إنجازاتنا',
@@ -119,7 +121,9 @@ const translations = {
       'footer_copyright': '© 2018 - 2025 أكاديمية مخترعون، كل الحقوق محفوظة'
     },
     'en': {
-      'title': 'Mokhtareon',
+      'title': 'Mokhtareon | Kids Programming, Robotics & STEM EdTech Academy Egypt',
+      'meta_description': 'Mokhtareon — kids programming academy, robotics academy, STEM and edtech in Egypt (Cairo, Alexandria, Hurghada). Python, AI and hands-on coding courses. Founder & Owner: Bassel Sallam.',
+      'seo_intro': 'Mokhtareon is Egypt\'s kids programming academy, robotics academy, STEM and edtech academy serving Cairo, Alexandria and Hurghada. Founder & Owner: Bassel Sallam (باسل سلام).',
       'nav_courses': 'Our Courses',
       'nav_why': 'Why Mokhtareon',
       'nav_projects': 'Our Achievements',
@@ -299,6 +303,30 @@ function getCurrentPage() {
 }
 
 // Function to translate the page
+function updateSeoMeta(lang) {
+  const currentPage = getCurrentPage();
+  const t = translations[currentPage] && translations[currentPage][lang];
+  if (!t) return;
+
+  if (t.title) {
+    document.title = t.title;
+  }
+  if (t.meta_description) {
+    const metaDesc = document.getElementById('meta-description');
+    if (metaDesc) metaDesc.setAttribute('content', t.meta_description);
+
+    const ogTitle = document.getElementById('og-title');
+    const ogDesc = document.getElementById('og-description');
+    const twTitle = document.getElementById('twitter-title');
+    const twDesc = document.getElementById('twitter-description');
+
+    if (ogTitle) ogTitle.setAttribute('content', t.title || t.meta_description);
+    if (ogDesc) ogDesc.setAttribute('content', t.meta_description);
+    if (twTitle) twTitle.setAttribute('content', t.title || t.meta_description);
+    if (twDesc) twDesc.setAttribute('content', t.meta_description);
+  }
+}
+
 function translatePage(lang) {
   console.log('Translating page to:', lang);
   const currentPage = getCurrentPage();
@@ -328,7 +356,11 @@ function translatePage(lang) {
     if (contentKey) {
       const translation = translations[currentPage][lang][contentKey];
       if (translation) {
-        element.innerHTML = translation;
+        if (element.tagName === 'TITLE') {
+          document.title = translation;
+        } else {
+          element.innerHTML = translation;
+        }
       } else {
         console.warn('No translation found for content key:', contentKey);
       }
@@ -344,6 +376,8 @@ function translatePage(lang) {
     }
   });
   
+  updateSeoMeta(lang);
+
   // Set direction based on language
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';

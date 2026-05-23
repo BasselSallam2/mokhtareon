@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dash
+Disallow: /dash.html
+Disallow: /brand-guidelines
+Disallow: /brand-guidelines.html
+Disallow: /docs/
+
+Sitemap: https://www.mokhtareon.com/sitemap.xml
