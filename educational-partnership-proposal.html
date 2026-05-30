@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Educational Partnership Proposal | Mokhtareon Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #1364a2;
+        --primary-dark: #0d4d7a;
+        --secondary-color: #2e3c46;
+        --accent-color: #ff7500;
+        --soft-blue: #1364a240;
+        --light-bg: #f4f8fc;
+        --white: #ffffff;
+        --border: rgba(19, 100, 162, 0.16);
+        --shadow: 0 18px 45px rgba(19, 100, 162, 0.12);
+        --radius: 18px;
+        --font-en: "Poppins", sans-serif;
+        --font-ar: "Tajawal", sans-serif;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: #dfeaf3;
+      }
+
+      body {
+        margin: 0;
+        color: var(--secondary-color);
+        font-family: var(--font-en);
+        font-size: 15px;
+        line-height: 1.65;
+        background: var(--light-bg);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      .document {
+        max-width: 980px;
+        margin: 0 auto;
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .page {
+        position: relative;
+        min-height: 1120px;
+        padding: 54px;
+        overflow: hidden;
+        background: var(--white);
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        top: -140px;
+        right: -160px;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: rgba(19, 100, 162, 0.08);
+      }
+
+      .page::after {
+        content: "";
+        position: absolute;
+        bottom: -150px;
+        left: -140px;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(255, 117, 0, 0.08);
+      }
+
+      .page-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cover {
+        color: var(--white);
+        background:
+          radial-gradient(circle at 15% 80%, rgba(255, 117, 0, 0.3), transparent 34%),
+          radial-gradient(circle at 86% 16%, rgba(255, 255, 255, 0.16), transparent 32%),
+          linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 58%, var(--secondary-color) 100%);
+      }
+
+      .cover::before,
+      .cover::after {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: transparent;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .logo-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        background: var(--white);
+      }
+
+      .logo-box img {
+        display: block;
+        max-width: 160px;
+        max-height: 70px;
+      }
+
+      .brand-name {
+        text-align: right;
+      }
+
+      .brand-name strong {
+        display: block;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .brand-name span {
+        display: block;
+        font-family: var(--font-ar);
+        font-size: 15px;
+        opacity: 0.86;
+      }
+
+      .cover-content {
+        max-width: 760px;
+        margin-top: 132px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        margin-bottom: 18px;
+        padding: 7px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 66px;
+        line-height: 1.04;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        max-width: 670px;
+        margin-bottom: 34px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 22px;
+        line-height: 1.45;
+      }
+
+      .accent {
+        color: var(--accent-color);
+      }
+
+      .cover-meta,
+      .stats-grid,
+      .benefits,
+      .contact-panel {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .meta-card {
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .meta-card strong {
+        display: block;
+        color: var(--accent-color);
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .meta-card span {
+        display: block;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 12px;
+      }
+
+      .page-footer {
+        position: absolute;
+        right: 54px;
+        bottom: 34px;
+        left: 54px;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(19, 100, 162, 0.14);
+        padding-top: 14px;
+        color: #7a8a94;
+        font-size: 11px;
+      }
+
+      .cover .page-footer {
+        border-top-color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 26px;
+      }
+
+      .section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 92px;
+        min-height: 92px;
+        border-radius: 24px;
+        color: var(--white);
+        background: var(--primary-color);
+        font-size: 26px;
+        font-weight: 800;
+      }
+
+      .section-title {
+        flex: 1;
+      }
+
+      .section-title span {
+        display: block;
+        color: var(--accent-color);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        color: var(--primary-color);
+        font-size: 34px;
+        line-height: 1.16;
+        font-weight: 800;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        color: var(--primary-color);
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .lead {
+        color: var(--secondary-color);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .content-card {
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(135deg, rgba(19, 100, 162, 0.08), rgba(255, 117, 0, 0.06)),
+          var(--white);
+      }
+
+      .section-image {
+        display: flex;
+        min-height: 260px;
+        align-items: center;
+        justify-content: center;
+        margin: 26px 0;
+        border: 2px dashed rgba(19, 100, 162, 0.35);
+        border-radius: 24px;
+        background:
+          linear-gradient(135deg, rgba(19, 100, 162, 0.08), rgba(255, 117, 0, 0.08)),
+          var(--light-bg);
+        color: var(--primary-color);
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .stat-card,
+      .curriculum-summary-card {
+        padding: 22px;
+        border-radius: var(--radius);
+        background: var(--light-bg);
+        border: 1px solid var(--border);
+      }
+
+      .stat-card strong {
+        display: block;
+        color: var(--accent-color);
+        font-size: 34px;
+        line-height: 1;
+        font-weight: 800;
+      }
+
+      .stat-card span {
+        display: block;
+        margin-top: 8px;
+        color: var(--secondary-color);
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .curriculum-summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .curriculum-summary-card h3 {
+        margin-bottom: 6px;
+      }
+
+      .target {
+        display: inline-flex;
+        margin-bottom: 14px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 117, 0, 0.1);
+        color: #c95b00;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .image-placeholder {
+        display: flex;
+        min-height: 155px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        border: 2px dashed rgba(19, 100, 162, 0.4);
+        border-radius: 16px;
+        background:
+          linear-gradient(135deg, rgba(19, 100, 162, 0.09), rgba(255, 117, 0, 0.08)),
+          #fff;
+        color: var(--primary-color);
+        font-size: 12px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .curriculum-detail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 22px;
+      }
+
+      .program-list {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .program-list li {
+        margin-bottom: 10px;
+      }
+
+      .benefits {
+        margin-top: 26px;
+      }
+
+      .benefit-card {
+        position: relative;
+        min-height: 230px;
+        padding: 24px;
+        border-radius: var(--radius);
+        color: var(--white);
+        background: var(--primary-color);
+        overflow: hidden;
+      }
+
+      .benefit-card:nth-child(2) {
+        background: var(--primary-dark);
+      }
+
+      .benefit-card:nth-child(3) {
+        background: var(--accent-color);
+      }
+
+      .benefit-card h3 {
+        color: var(--white);
+      }
+
+      .benefit-card p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 13px;
+      }
+
+      .contact-panel {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 26px;
+        padding: 30px;
+        border-radius: var(--radius);
+        color: var(--white);
+        background:
+          radial-gradient(circle at 100% 0%, rgba(255, 117, 0, 0.3), transparent 34%),
+          var(--primary-color);
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .contact-item {
+        padding: 15px 16px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .contact-item span {
+        display: block;
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .contact-item strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 15px;
+      }
+
+      .signature {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 18px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .signature strong {
+        color: var(--accent-color);
+        font-size: 24px;
+      }
+
+      .arabic {
+        font-family: var(--font-ar);
+      }
+
+      @media print {
+        html,
+        body {
+          background: var(--white);
+        }
+
+        .document {
+          max-width: none;
+          box-shadow: none;
+        }
+
+        .page {
+          min-height: 297mm;
+          padding: 18mm;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .page {
+          min-height: auto;
+          padding: 28px;
+        }
+
+        h1 {
+          font-size: 42px;
+        }
+
+        .section-header,
+        .brand-row,
+        .page-footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .cover-meta,
+        .stats-grid,
+        .benefits,
+        .contact-panel,
+        .curriculum-summary-grid,
+        .curriculum-detail,
+        .image-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .page-footer {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          margin-top: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="document">
+      <section class="page cover">
+        <div class="page-content">
+          <div class="brand-row">
+            <div class="logo-box">
+              <img src="imgs/image 34.svg" alt="Mokhtareon Academy logo" />
+            </div>
+            <div class="brand-name">
+              <strong>Mokhtareon Academy</strong>
+              <span class="arabic">المخترعون</span>
+            </div>
+          </div>
+
+          <div class="cover-content">
+            <div class="eyebrow">Educational Partnership Proposal</div>
+            <h1>
+              Empowering the Next Generation of
+              <span class="accent">Tech Innovators</span>
+            </h1>
+            <p class="subtitle">
+              A strategic school partnership proposal designed to bring practical STEM,
+              robotics, programming, and AI education into the school learning journey.
+            </p>
+
+            <div class="cover-meta">
+              <div class="meta-card">
+                <strong>2020</strong>
+                <span>Established</span>
+              </div>
+              <div class="meta-card">
+                <strong>10+</strong>
+                <span>Branches across Cairo and Alexandria</span>
+              </div>
+              <div class="meta-card">
+                <strong>100+</strong>
+                <span>Dedicated instructors</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>Prepared for School Leadership & Administration</span>
+          <span>www.mokhtareon.com</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">01</div>
+            <div class="section-title">
+              <span>Message</span>
+              <h2>A Message to School Leadership & Administration</h2>
+            </div>
+          </div>
+
+          <div class="section-image">Placeholder Image: School Leadership Partnership Moment</div>
+
+          <div class="content-card">
+            <p class="lead">Dear School Leadership & Administration,</p>
+            <p>
+              It is our distinct pleasure to present this strategic partnership proposal to
+              your esteemed institution. At Mokhtareon Academy, we believe that schools are
+              the foundational pillars of future innovators. By integrating our specialized,
+              cutting-edge technology curriculum with your school’s academic excellence, we
+              aim to deliver an uncompromised educational journey that equips students with
+              real-world technical and cognitive skills.
+            </p>
+            <p>
+              We align our core institutional milestones directly with our partner schools
+              to cultivate an optimal learning environment, powered entirely by your
+              collaboration and continuous support.
+            </p>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>01 / Message</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">02</div>
+            <div class="section-title">
+              <span>About</span>
+              <h2>About Mokhtareon Academy</h2>
+            </div>
+          </div>
+
+          <div class="section-image">Placeholder Image: Mokhtareon Branch / Classroom Experience</div>
+
+          <p class="lead">
+            Founded in 2020 with a clear, transformative vision, Mokhtareon Academy is
+            dedicated to revolutionizing education in Egypt.
+          </p>
+          <p>
+            We shift the learning experience away from traditional methods to a dynamic
+            ecosystem that is completely technology-driven, practical, and highly engaging
+            for school students.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong>2020</strong>
+              <span>Established with a transformative educational vision</span>
+            </div>
+            <div class="stat-card">
+              <strong>10+</strong>
+              <span>Branches spanning across Cairo and Alexandria</span>
+            </div>
+            <div class="stat-card">
+              <strong>100+</strong>
+              <span>Dedicated instructors committed to excellence</span>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>02 / About</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">03</div>
+            <div class="section-title">
+              <span>Curriculum Overview</span>
+              <h2>Our Specialized Curriculums</h2>
+            </div>
+          </div>
+
+          <div class="section-image">Placeholder Image: Student Portfolio / Practical Lab Overview</div>
+
+          <p class="lead">
+            Our programs are carefully tiered to match the cognitive and analytical
+            development phases of school students.
+          </p>
+          <p>
+            Each curriculum track is supported by visual student portfolios and practical
+            lab photography. The following pages dedicate one page per curriculum, with
+            five image placeholders for replacing with real student work, lab moments, and
+            final projects.
+          </p>
+
+          <div class="curriculum-summary-grid">
+            <div class="curriculum-summary-card">
+              <h3>Robotics And Electronics</h3>
+              <p>Target Group: 8 years and above</p>
+            </div>
+            <div class="curriculum-summary-card">
+              <h3>Python Programming</h3>
+              <p>Target Group: 10 years and above</p>
+            </div>
+            <div class="curriculum-summary-card">
+              <h3>Artificial Intelligence (AI)</h3>
+              <p>Target Group: 10 years and above</p>
+            </div>
+            <div class="curriculum-summary-card">
+              <h3>Scratch</h3>
+              <p>Target Group: 7 years and above</p>
+            </div>
+            <div class="curriculum-summary-card">
+              <h3>C++ Programming</h3>
+              <p>Target Group: 10 years and above</p>
+            </div>
+            <div class="curriculum-summary-card">
+              <h3>Web Development</h3>
+              <p>Target Group: 9 years and above</p>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>03 / Curriculum Overview</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">04</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>Robotics And Electronics</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 8 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                Students explore how machines sense, process, and respond through practical
+                robotics builds and electronics labs.
+              </p>
+              <ul class="program-list">
+                <li>Hardware assembly and component identification.</li>
+                <li>Basic circuit design and safe lab handling.</li>
+                <li>Arduino setup, sensor logic, and motion control.</li>
+                <li>Final project build with presentation and testing.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: Robotics Hero Project</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">Hardware Lab</div>
+            <div class="image-placeholder">Circuit Design</div>
+            <div class="image-placeholder">Arduino Setup</div>
+            <div class="image-placeholder">Sensor Logic</div>
+            <div class="image-placeholder">Project Build</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>04 / Robotics And Electronics</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">05</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>Python Programming</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 10 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                Python introduces students to structured thinking, logic, and practical
+                coding through accessible syntax and meaningful projects.
+              </p>
+              <ul class="program-list">
+                <li>Syntax basics, variables, and data types.</li>
+                <li>Conditional logic, loops, and problem solving.</li>
+                <li>Script practice through guided challenges.</li>
+                <li>Prototype simple apps and interactive tools.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: Python Coding Session</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">Syntax Intro</div>
+            <div class="image-placeholder">Data Types</div>
+            <div class="image-placeholder">Logic Loops</div>
+            <div class="image-placeholder">Script Practice</div>
+            <div class="image-placeholder">App Prototype</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>05 / Python Programming</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">06</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>Artificial Intelligence (AI)</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 10 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                Students discover AI concepts through age-appropriate activities that show
+                how machines learn, classify, and make predictions.
+              </p>
+              <ul class="program-list">
+                <li>Machine learning concepts explained visually.</li>
+                <li>Working with simple datasets and model inputs.</li>
+                <li>Training, testing, and improving basic models.</li>
+                <li>Final AI agent or computer vision demonstration.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: AI Lab Demonstration</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">ML Concepts</div>
+            <div class="image-placeholder">Data Sets</div>
+            <div class="image-placeholder">Model Training</div>
+            <div class="image-placeholder">Vision Tech</div>
+            <div class="image-placeholder">Final AI Agent</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>06 / Artificial Intelligence</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">07</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>Scratch</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 7 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                Scratch helps younger students build programming confidence through visual
+                block logic, games, stories, and interactive animations.
+              </p>
+              <ul class="program-list">
+                <li>Block-based logic and sequencing.</li>
+                <li>Sprites, motion, events, and interaction.</li>
+                <li>Game loops and scoring mechanics.</li>
+                <li>Story animation and final project showcase.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: Scratch Game Showcase</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">Block Logic</div>
+            <div class="image-placeholder">Sprites & Motion</div>
+            <div class="image-placeholder">Event Handling</div>
+            <div class="image-placeholder">Game Loop</div>
+            <div class="image-placeholder">Story Animation</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>07 / Scratch</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">08</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>C++ Programming</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 10 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                C++ builds strong fundamentals in computational thinking, algorithms, and
+                structured problem solving for advanced learners.
+              </p>
+              <ul class="program-list">
+                <li>Syntax, functions, and object-oriented basics.</li>
+                <li>Compiler workflow and debugging habits.</li>
+                <li>Memory concepts and algorithmic thinking.</li>
+                <li>Optimization challenges and final code project.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: C++ Problem-Solving Lab</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">OOP Basics</div>
+            <div class="image-placeholder">Compilers</div>
+            <div class="image-placeholder">Memory Ptrs</div>
+            <div class="image-placeholder">Algorithms</div>
+            <div class="image-placeholder">Optimization</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>08 / C++ Programming</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">09</div>
+            <div class="section-title">
+              <span>Curriculum Track</span>
+              <h2>Web Development</h2>
+            </div>
+          </div>
+          <span class="target">Target Group: 9 years and above</span>
+
+          <div class="curriculum-detail">
+            <div>
+              <p class="lead">
+                Web Development gives students the ability to create, style, and publish
+                real websites while learning the structure of the modern web.
+              </p>
+              <ul class="program-list">
+                <li>HTML structure and semantic content.</li>
+                <li>CSS styling, layout, and responsive design.</li>
+                <li>JavaScript controls and interactive elements.</li>
+                <li>Live deployment and final website showcase.</li>
+              </ul>
+            </div>
+            <div class="section-image">Placeholder Image: Student Website Showcase</div>
+          </div>
+
+          <div class="image-grid">
+            <div class="image-placeholder">HTML Structure</div>
+            <div class="image-placeholder">CSS Styles</div>
+            <div class="image-placeholder">Layout Design</div>
+            <div class="image-placeholder">JS Controls</div>
+            <div class="image-placeholder">Live Deploy</div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>09 / Web Development</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">10</div>
+            <div class="section-title">
+              <span>School Benefits</span>
+              <h2>Strategic Institutional Benefits for Schools</h2>
+            </div>
+          </div>
+
+          <div class="section-image">Placeholder Image: School Competition / Student Achievement</div>
+
+          <p class="lead">
+            A partnership with Mokhtareon Academy provides clear advantages to your school
+            community across public prestige, parent satisfaction, and mutual institutional
+            growth.
+          </p>
+
+          <div class="benefits">
+            <div class="benefit-card">
+              <h3>Enhanced Public Profile & Prestige</h3>
+              <p>
+                We register and enter national and international tech competitions directly
+                under the school’s official banner with your students, elevating marketplace
+                prestige and public profile.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <h3>Exclusive Parent Value Additions</h3>
+              <p>
+                By registering through the school, students enjoy exclusive, heavy tuition
+                discounts, adding significant practical value directly to their parents.
+              </p>
+            </div>
+            <div class="benefit-card">
+              <h3>Direct Financial Revenue Allocation</h3>
+              <p>
+                The school achieves real financial returns, as we contractually allocate a
+                share of the enrollment profits directly back to your institution.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>10 / School Benefits</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+
+      <section class="page">
+        <div class="page-content">
+          <div class="section-header">
+            <div class="section-number">11</div>
+            <div class="section-title">
+              <span>Contact</span>
+              <h2>Contact Channels</h2>
+            </div>
+          </div>
+
+          <div class="section-image">Placeholder Image: Presentation Meeting / Partnership Signing</div>
+
+          <div class="contact-panel">
+            <div>
+              <p class="lead" style="color: rgba(255, 255, 255, 0.92)">
+                Let's build a technology-driven future together. Reach out to schedule an
+                in-person framework presentation.
+              </p>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <span>Email Address</span>
+                  <strong>bassel@mokhtareon.com</strong>
+                </div>
+                <div class="contact-item">
+                  <span>Primary Telephone</span>
+                  <strong>+20-1100725449</strong>
+                </div>
+                <div class="contact-item">
+                  <span>Secondary Telephone</span>
+                  <strong>+20-1007526521</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="signature">
+              <div>
+                <strong>Mokhtareon Academy</strong>
+                <p class="arabic" style="margin-top: 6px; color: rgba(255, 255, 255, 0.86)">
+                  المخترعون
+                </p>
+              </div>
+              <p style="margin-bottom: 0; color: rgba(255, 255, 255, 0.78)">
+                Clear, trusted, educational, child-friendly, blue/orange, rounded, readable,
+                and consistent in naming.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer">
+          <span>11 / Contact</span>
+          <span>Mokhtareon Academy</span>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

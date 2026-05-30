@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Moderator QFA — Mokhtareon | المخترعون</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" href="../imgs/Artboard 1 copy.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/brand-guidelines.css" />
+    <style>
+      /* QFA page — scoped styles */
+      body.brand-guidelines.qfa-page {
+        --qfa-question-bg: rgba(19, 100, 162, 0.06);
+        --qfa-answer-bg: rgba(255, 117, 0, 0.06);
+      }
+
+      .qfa-hero {
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      .qfa-hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+      }
+
+      .qfa-wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem 4rem;
+      }
+
+      .qfa-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: -1.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .qfa-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .qfa-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+      }
+
+      .qfa-row--question {
+        background: var(--qfa-question-bg);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .qfa-row--answer {
+        background: var(--qfa-answer-bg);
+      }
+
+      .qfa-label {
+        flex-shrink: 0;
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--white);
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-top: 0.1rem;
+      }
+
+      .qfa-label--answer {
+        background: var(--accent);
+      }
+
+      .qfa-text {
+        flex: 1;
+        min-width: 0;
+        font: inherit;
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .qfa-text--question {
+        font-weight: 600;
+        color: var(--primary);
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .qfa-text--answer {
+        color: var(--text);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        background: none;
+        border: none;
+        padding: 0;
+        font-family: inherit;
+      }
+
+      .qfa-copy {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: var(--bg-card);
+        color: var(--primary);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-top: 0.05rem;
+      }
+
+      .qfa-copy:hover {
+        background: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+
+      .qfa-copy:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .qfa-copy.is-copied {
+        background: #22c55e;
+        color: var(--white);
+        border-color: #22c55e;
+      }
+
+      .qfa-copy__icon {
+        display: block;
+      }
+
+      .qfa-copy__icon--tick {
+        display: none;
+      }
+
+      .qfa-copy.is-copied .qfa-copy__icon--copy {
+        display: none;
+      }
+
+      .qfa-copy.is-copied .qfa-copy__icon--tick {
+        display: block;
+      }
+
+      .qfa-count {
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 640px) {
+        .qfa-row {
+          padding: 0.85rem 1rem;
+          gap: 0.5rem;
+        }
+
+        .qfa-copy {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .qfa-text--question {
+          font-size: 0.95rem;
+        }
+
+        .qfa-text--answer {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="brand-guidelines qfa-page">
+    <header class="bg-topbar">
+      <div class="bg-topbar__logo">
+        <img src="../imgs/image 34.svg" alt="المخترعون — Mokhtareon" />
+      </div>
+      <span class="bg-topbar__meta">أداة المشرفين · QFA</span>
+    </header>
+
+    <section class="bg-hero qfa-hero">
+      <div class="bg-hero__inner">
+        <span class="bg-hero__badge">Moderator QFA</span>
+        <h1>أسئلة وأجوبة سريعة</h1>
+        <p class="bg-hero__tagline">
+          انسخ السؤال أو الجواب بضغطة واحدة للرد السريع
+        </p>
+        <p class="bg-hero__sub">32 سؤال وجواب جاهز للاستخدام</p>
+      </div>
+    </section>
+
+    <main class="qfa-wrap">
+      <div class="qfa-list" id="qfa-list">
+      <article class="qfa-card bg-card" data-id="1">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">ممكن تفاصيل ؟</p>
+          <button type="button" class="qfa-copy" data-copy="ممكن تفاصيل ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">اهلا بحضرتك في اكادميه مخترعون لتعليم البرمجه و الروبوتات لطلاب المدارس  من سن 7 الي ١٨ سنه 
+عندنا فروع في جميع انحاء القاهره و الجيزه و الاسكندريه
+حابه حضرتك تستفسري عن حاجه معينه ؟</pre>
+          <button type="button" class="qfa-copy" data-copy="اهلا بحضرتك في اكادميه مخترعون لتعليم البرمجه و الروبوتات لطلاب المدارس  من سن 7 الي ١٨ سنه 
+عندنا فروع في جميع انحاء القاهره و الجيزه و الاسكندريه
+حابه حضرتك تستفسري عن حاجه معينه ؟" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="2">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">الفروع</p>
+          <button type="button" class="qfa-copy" data-copy="الفروع" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">فروعنا:
+القاهرة:
+ التجمع الخامس - شارع التسعين الجنوبي بجوار مطعم سيدرا
+المعادي - شارع النصر بجوار بنك بلوم و سيراميكا كليوباترا
+مدينة نصر - شارع مصطفي النحاس الرئيسي بجوار مطعم بلال
+مصر الجديدة شارع الحجاز - محطة مترو هليوبليس- بجوار كوستا كافيه
+الشيخ زايد - sodic - beverly hills
+
+الاسكندرية:
+لوران - شارع الشعراوي
+رشدي - 7 ميخائيل ابادير
+العجمي - اول البيطاش الشارع الرئيسي بجوار بنك القاهرة</pre>
+          <button type="button" class="qfa-copy" data-copy="فروعنا:
+القاهرة:
+ التجمع الخامس - شارع التسعين الجنوبي بجوار مطعم سيدرا
+المعادي - شارع النصر بجوار بنك بلوم و سيراميكا كليوباترا
+مدينة نصر - شارع مصطفي النحاس الرئيسي بجوار مطعم بلال
+مصر الجديدة شارع الحجاز - محطة مترو هليوبليس- بجوار كوستا كافيه
+الشيخ زايد - sodic - beverly hills
+
+الاسكندرية:
+لوران - شارع الشعراوي
+رشدي - 7 ميخائيل ابادير
+العجمي - اول البيطاش الشارع الرئيسي بجوار بنك القاهرة" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="3">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن التجمع الخامس</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن التجمع الخامس" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/ByRNz3Kh7ruzGhgR8?g_st=ic</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/ByRNz3Kh7ruzGhgR8?g_st=ic" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="4">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن مدينه نصر</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن مدينه نصر" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/kjf9PWzFDrhPhUod7?g_st=ic</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/kjf9PWzFDrhPhUod7?g_st=ic" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="5">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن مصر الجديدة</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن مصر الجديدة" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/u9Nb3MYqXkYucKiKA?g_st=ic</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/u9Nb3MYqXkYucKiKA?g_st=ic" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="6">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن المعادي</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن المعادي" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/hvREwW1yjmgQ9gDC9?g_st=ic</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/hvREwW1yjmgQ9gDC9?g_st=ic" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="7">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن الشيخ زايد</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن الشيخ زايد" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://share.google/UIH4YkxtcXqF7sLtW</pre>
+          <button type="button" class="qfa-copy" data-copy="https://share.google/UIH4YkxtcXqF7sLtW" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="8">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن رشدي</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن رشدي" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/5UeRjZMtdsnMXzJS8?g_st=ipc</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/5UeRjZMtdsnMXzJS8?g_st=ipc" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="9">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن لوران</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن لوران" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.app.goo.gl/2XnSUwt24yAUoa48A?g_st=iw</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.app.goo.gl/2XnSUwt24yAUoa48A?g_st=iw" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="10">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">لوكيشن البيطاش عجمي</p>
+          <button type="button" class="qfa-copy" data-copy="لوكيشن البيطاش عجمي" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">https://maps.google.com/?q=30.052710,31.334627</pre>
+          <button type="button" class="qfa-copy" data-copy="https://maps.google.com/?q=30.052710,31.334627" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="11">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل الاماكن دي بتاعتكم ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل الاماكن دي بتاعتكم ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">المبني فعليا مش بتاعنا و لكن احنا متعاقدين مع اكتر من سناتر تعليميه و ووركينج اسبيسيس و بيتم تاجير غرف ثابته لينا ب اسم الاكاديميه علشان نقدر نكون متواجدين حواليكم في اكتر من مكان</pre>
+          <button type="button" class="qfa-copy" data-copy="المبني فعليا مش بتاعنا و لكن احنا متعاقدين مع اكتر من سناتر تعليميه و ووركينج اسبيسيس و بيتم تاجير غرف ثابته لينا ب اسم الاكاديميه علشان نقدر نكون متواجدين حواليكم في اكتر من مكان" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="12">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">الاسعار</p>
+          <button type="button" class="qfa-copy" data-copy="الاسعار" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">احنا عاملين خصم حاليا بمناسبة العيد و بداية الاجازة
+اي دورة من دوراتنا بيكون الليفل مدته شهر 
+الاشتراك شهر واحد فقط 1500 جنيه بدلا من 2000 جنيه 
+الاشتراك 3 شهور دفعه واحدة ب 3600 جنيه بدلا من 4500 جنيه
+و الاشتراك 6 شهور دفعه واحدة ب 6000 جنيه بدلا من 9000 جنيه
+و يوجد خصم 10% في حالة الاشتراك اونلاين</pre>
+          <button type="button" class="qfa-copy" data-copy="احنا عاملين خصم حاليا بمناسبة العيد و بداية الاجازة
+اي دورة من دوراتنا بيكون الليفل مدته شهر 
+الاشتراك شهر واحد فقط 1500 جنيه بدلا من 2000 جنيه 
+الاشتراك 3 شهور دفعه واحدة ب 3600 جنيه بدلا من 4500 جنيه
+و الاشتراك 6 شهور دفعه واحدة ب 6000 جنيه بدلا من 9000 جنيه
+و يوجد خصم 10% في حالة الاشتراك اونلاين" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="13">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل فيه خصم اخوات</p>
+          <button type="button" class="qfa-copy" data-copy="هل فيه خصم اخوات" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">للاسف حضرتك نازل خصم حاليا علي الكورس ف بيكون صعب نطبق خصمين فوق بعض</pre>
+          <button type="button" class="qfa-copy" data-copy="للاسف حضرتك نازل خصم حاليا علي الكورس ف بيكون صعب نطبق خصمين فوق بعض" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="14">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">الفرق بين اونلاين و اوفلاين</p>
+          <button type="button" class="qfa-copy" data-copy="الفرق بين اونلاين و اوفلاين" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">في الاوفلاين بيتم الحضور في مجموعات من 3ل6 طلاب بجد اقصي 
+في الاونلاين بيكون الحضور برايفيت 1:1 من خلال جوجل ميتينج او زووم</pre>
+          <button type="button" class="qfa-copy" data-copy="في الاوفلاين بيتم الحضور في مجموعات من 3ل6 طلاب بجد اقصي 
+في الاونلاين بيكون الحضور برايفيت 1:1 من خلال جوجل ميتينج او زووم" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="15">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">متاح الدفع بالقسط ؟</p>
+          <button type="button" class="qfa-copy" data-copy="متاح الدفع بالقسط ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">في حالة الاشتراك شهر فقط متاح تاجيل قيمه 50% من المصروفات لاخر يوم ب زيادة مصاريف 5%
+في حالة الاشتراك 3 شهور او اعلي متاح تقسيط قيمه 70% لمدة شهر بدون مصاريف اضافية</pre>
+          <button type="button" class="qfa-copy" data-copy="في حالة الاشتراك شهر فقط متاح تاجيل قيمه 50% من المصروفات لاخر يوم ب زيادة مصاريف 5%
+في حالة الاشتراك 3 شهور او اعلي متاح تقسيط قيمه 70% لمدة شهر بدون مصاريف اضافية" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="16">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">طريقة الشرح - نظام المحاضرات - نظام الحضور</p>
+          <button type="button" class="qfa-copy" data-copy="طريقة الشرح - نظام المحاضرات - نظام الحضور" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">اي كورس عندنا بيتكون من عدة مستويات كل مستوي بيكون مدته شهر 
+سيشن اسببوعيا مدتها ساعتين فيما فوق 
+جزء منها بيكون شرح نظري و باقي السيشن بتكون تطبيق علي ما تم شرحه او عمل مشاريع علي كل ما تم دراسته 
+و في خلال الاسبوع الراحة بيكون فيه اسيمينتس و مشاريع و بتطلب من الطالب و المهندسين بيكونو متواجدين دايما للرد علي اي استفسار</pre>
+          <button type="button" class="qfa-copy" data-copy="اي كورس عندنا بيتكون من عدة مستويات كل مستوي بيكون مدته شهر 
+سيشن اسببوعيا مدتها ساعتين فيما فوق 
+جزء منها بيكون شرح نظري و باقي السيشن بتكون تطبيق علي ما تم شرحه او عمل مشاريع علي كل ما تم دراسته 
+و في خلال الاسبوع الراحة بيكون فيه اسيمينتس و مشاريع و بتطلب من الطالب و المهندسين بيكونو متواجدين دايما للرد علي اي استفسار" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="17">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">البرامج - الكورسات</p>
+          <button type="button" class="qfa-copy" data-copy="البرامج - الكورسات" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كورس البرمجة و الروبوتات 7 مستويات - بداية من 8 سنوات
+كورس الجافا اسكريبت 5 مستويات - بداية من 10 سنوات
+كورس تصميم المواقع 5 مستويات- بداية من 10 سنوات
+كورس البايثون 5 مستويات - بداية من 10 سنوات
+كورس الذكاء الاصنطاعي 3 مستويات- بداية من 10 سنوات
+كورس اسكراتش 3 مستويات - بداية من 7 سنوات</pre>
+          <button type="button" class="qfa-copy" data-copy="كورس البرمجة و الروبوتات 7 مستويات - بداية من 8 سنوات
+كورس الجافا اسكريبت 5 مستويات - بداية من 10 سنوات
+كورس تصميم المواقع 5 مستويات- بداية من 10 سنوات
+كورس البايثون 5 مستويات - بداية من 10 سنوات
+كورس الذكاء الاصنطاعي 3 مستويات- بداية من 10 سنوات
+كورس اسكراتش 3 مستويات - بداية من 7 سنوات" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="18">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل الروبوتات</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل الروبوتات" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كورس  البرمجة و الروبوتات لكل شخص محب للالكترونيات و الادوات الكهربائية و عنده فضول يعرف ازاي الباب ده بيفتح لوحده او ازاي العربية بيتم تحريكها عن بعد 
+في بداية الكورس بيتم دراسه الالكترونيات و صناعه اجهزه كهربائية زي ( مروحة - اشارة مرور - عربية) و توصيل الدوائر الكهربائية و الازرار الكهربائية
+بعديها نبدا نتعلم البرمجة بلغة c++ لبرمجة الاجهزة دي و التعامل مع السينسورز 
+علي سبيل المثال: صناعه مروحة بتشتغل في النهار فقط لوحدها و تقفل لوحدها في الليل
+و في كل سيشن بيتم تنفيذ مجموعه متنوعه جدا من المشاريع و بنوصل لمستوي كبير مع الطالب بحيث يقدر ينفذ خزنه ذكية او عربية بالتحكم عن بعد بنفسه</pre>
+          <button type="button" class="qfa-copy" data-copy="كورس  البرمجة و الروبوتات لكل شخص محب للالكترونيات و الادوات الكهربائية و عنده فضول يعرف ازاي الباب ده بيفتح لوحده او ازاي العربية بيتم تحريكها عن بعد 
+في بداية الكورس بيتم دراسه الالكترونيات و صناعه اجهزه كهربائية زي ( مروحة - اشارة مرور - عربية) و توصيل الدوائر الكهربائية و الازرار الكهربائية
+بعديها نبدا نتعلم البرمجة بلغة c++ لبرمجة الاجهزة دي و التعامل مع السينسورز 
+علي سبيل المثال: صناعه مروحة بتشتغل في النهار فقط لوحدها و تقفل لوحدها في الليل
+و في كل سيشن بيتم تنفيذ مجموعه متنوعه جدا من المشاريع و بنوصل لمستوي كبير مع الطالب بحيث يقدر ينفذ خزنه ذكية او عربية بالتحكم عن بعد بنفسه" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="19">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل الجافا اسكريبت</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل الجافا اسكريبت" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">منهج الجافااسكريبت بالمناسبة هو المادة المقررة في منهج البكالرويا الجديد ف هو مناسب للي حابب يتخصص في البرمجة في البكالرويا 
+و هي لغة مفيدة لتعلم اساسيات البرمجة و تنمية الذكاء و التفكير المنطقي</pre>
+          <button type="button" class="qfa-copy" data-copy="منهج الجافااسكريبت بالمناسبة هو المادة المقررة في منهج البكالرويا الجديد ف هو مناسب للي حابب يتخصص في البرمجة في البكالرويا 
+و هي لغة مفيدة لتعلم اساسيات البرمجة و تنمية الذكاء و التفكير المنطقي" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="20">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل تصميم المواقع</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل تصميم المواقع" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">منهج html , css , javascript دول اهم 3 عناصر بنبدا بيهم بناء موقع الكتروني من الصفر 
+غرض الكورس هو تعليم الطلاب اساسيات عمل المواقع الالكترونية</pre>
+          <button type="button" class="qfa-copy" data-copy="منهج html , css , javascript دول اهم 3 عناصر بنبدا بيهم بناء موقع الكتروني من الصفر 
+غرض الكورس هو تعليم الطلاب اساسيات عمل المواقع الالكترونية" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="21">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل البايثون</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل البايثون" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">اللغة الاكثر استخداما في الذكاء الاصنطاعي و لو خدنا كورس صناعه نماذج ذكاء اصطناعي هيكون اول خطوة فيها هو احتراف لغة البايثون
+و لغة سلسة و سهلة و تناسب جدا لو حد اول مرة يتعلم برمجة و يفهم اساسيات و مبادئ البرمجة من خلالها</pre>
+          <button type="button" class="qfa-copy" data-copy="اللغة الاكثر استخداما في الذكاء الاصنطاعي و لو خدنا كورس صناعه نماذج ذكاء اصطناعي هيكون اول خطوة فيها هو احتراف لغة البايثون
+و لغة سلسة و سهلة و تناسب جدا لو حد اول مرة يتعلم برمجة و يفهم اساسيات و مبادئ البرمجة من خلالها" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="22">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل الذكاء الاصنطاعي</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل الذكاء الاصنطاعي" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">الكورس مخصص لكل طالب عايز يكتشف كل ادوات الذكاء الاصطناعي الموجودة حاليا و استخدامها في مجالات مختلفة زي البرمجة - التصميم و الي اخره 
+بنعلمهم فيه كيفية اسنخدام الادوات دي بشكل مثالي و بنعرفهم علي ادوات كتير و ازاي نقدر نستغل اكتر من اداة لصناعه شيء كبير 
+زي صناعه افلام او مواقع او برامج</pre>
+          <button type="button" class="qfa-copy" data-copy="الكورس مخصص لكل طالب عايز يكتشف كل ادوات الذكاء الاصطناعي الموجودة حاليا و استخدامها في مجالات مختلفة زي البرمجة - التصميم و الي اخره 
+بنعلمهم فيه كيفية اسنخدام الادوات دي بشكل مثالي و بنعرفهم علي ادوات كتير و ازاي نقدر نستغل اكتر من اداة لصناعه شيء كبير 
+زي صناعه افلام او مواقع او برامج" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="23">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">تفاصيل اسكراتش</p>
+          <button type="button" class="qfa-copy" data-copy="تفاصيل اسكراتش" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">الكورس المناسب للاطفال من سن 7 سنوات , لانه بيفهم الطفل مبادئ البرمجة و لكن بطريقة مبسطة و هو منهج عالمي معتمد من STEM لتعليم البرمجة للاطفال بابسط الطرق
+عن طريق صناعه العاب بسيطة او مشاهد كرتونية</pre>
+          <button type="button" class="qfa-copy" data-copy="الكورس المناسب للاطفال من سن 7 سنوات , لانه بيفهم الطفل مبادئ البرمجة و لكن بطريقة مبسطة و هو منهج عالمي معتمد من STEM لتعليم البرمجة للاطفال بابسط الطرق
+عن طريق صناعه العاب بسيطة او مشاهد كرتونية" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="24">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل محتاج جهاز لاب توب ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل محتاج جهاز لاب توب ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كورس الروبوتات فقط هو اللي ممكن منحتاجش فيه ﻻب توب و نستبدله ب موبايل اندرويد ( مينفعش ايفون)
+لكن باقي الكورسات لازم محتاجين لاب توب , و ممكن المهندس المختص عندنا يساعد حضرتك في شىاء لاب توب لو حابين</pre>
+          <button type="button" class="qfa-copy" data-copy="كورس الروبوتات فقط هو اللي ممكن منحتاجش فيه ﻻب توب و نستبدله ب موبايل اندرويد ( مينفعش ايفون)
+لكن باقي الكورسات لازم محتاجين لاب توب , و ممكن المهندس المختص عندنا يساعد حضرتك في شىاء لاب توب لو حابين" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="25">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">مش بتدو اجهزة لاب توب للاطفال من عندكم انتو ؟</p>
+          <button type="button" class="qfa-copy" data-copy="مش بتدو اجهزة لاب توب للاطفال من عندكم انتو ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">للاسف غير متوفر حاليا</pre>
+          <button type="button" class="qfa-copy" data-copy="للاسف غير متوفر حاليا" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="26">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل لازم جهاز اللاب توب تكون امكانياته عاليه ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل لازم جهاز اللاب توب تكون امكانياته عاليه ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">اي جهاز ب اي امكانيات يقدر يشتغل معانا بدون مشاكل</pre>
+          <button type="button" class="qfa-copy" data-copy="اي جهاز ب اي امكانيات يقدر يشتغل معانا بدون مشاكل" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="27">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">اشتري لاب توب ايه و منين ؟</p>
+          <button type="button" class="qfa-copy" data-copy="اشتري لاب توب ايه و منين ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">بننصح بشراء جهاز لاب توب استيراد من اي مكان موثوق زي مول البستان 
+نبعد عن HP لان النوع ده بيسخن زيادة و بنقترح DELL - lenovo
+اي جهاز لاب توب بيكون اهم عناصر فيها 
+البروسيسور - كارت الشاشة - الرامات 
+فيه لاب توبات مفهاش كارت شاشة و بالتالي بتكون رخيصة يفضل نجيبها لو مش هنستخدم اللاب توب في ( لعب العاب - مونتاج)
+البروسيسور INTEL يفضل بداية من الجيل الثامن I5 or I7
+و الرامات لا تقل عن 4 جيجا</pre>
+          <button type="button" class="qfa-copy" data-copy="بننصح بشراء جهاز لاب توب استيراد من اي مكان موثوق زي مول البستان 
+نبعد عن HP لان النوع ده بيسخن زيادة و بنقترح DELL - lenovo
+اي جهاز لاب توب بيكون اهم عناصر فيها 
+البروسيسور - كارت الشاشة - الرامات 
+فيه لاب توبات مفهاش كارت شاشة و بالتالي بتكون رخيصة يفضل نجيبها لو مش هنستخدم اللاب توب في ( لعب العاب - مونتاج)
+البروسيسور INTEL يفضل بداية من الجيل الثامن I5 or I7
+و الرامات لا تقل عن 4 جيجا" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="28">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل الكورس معتمد ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل الكورس معتمد ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">ايوة , الكورس معتمد دوليا من STEM 
+و من مدارس زي مدرسة اجيال - ريتاج - مصر الجديدة</pre>
+          <button type="button" class="qfa-copy" data-copy="ايوة , الكورس معتمد دوليا من STEM 
+و من مدارس زي مدرسة اجيال - ريتاج - مصر الجديدة" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="29">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">ايه هيفيد ابني اكتر ؟</p>
+          <button type="button" class="qfa-copy" data-copy="ايه هيفيد ابني اكتر ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كل كورساتنا مفيدة بطرق مختلفة 
+يشتركو كلهم في الافادة في الاتي:
+1) تنمية الذكاء و مهارة التفكير المنطقي ( نفس المهارة اللي بتنميها الرياضيات)
+2) المهارة نفسها اللي هيكتسبها الطالب من الكورس سواء في قدرته علي صناعه ادوات ذكية او مواقع الكترونية 
+3) بيتعرض الطالب معانا لتحديات عقيلة و معلومات و مشاريع جديدة عليه بتخليه قادر يكتشف مهاراته
+4) بيقدر الطالب من خلالنا تجربة مجال البرمجة و يحدد ميوله من ناحيته , خاصا ان المجال ده اصبح اساسي فكل المجالات
+
+كورس الروبوتات: بيستفيد الطالب التعرف علي السينسورز المختلفة و يقدر يعرف اي حهاز الكتروني شغال ازاي و يقدر بدوره يصنع مشاريع مشابهة
+كورس المواقع الالكترونية: هو مجال عمل لشباب كتير و مجال ممتع جدا و كل يوم بيحصل فيه تطورات و هيكون من المفيد جدا للطالب تعلمه من سن صغير
+كورسات البرمجة : تاسيس قوي لعالم البرمجة و لها نفس التاثير العقلي ل تعلم الرياضيات و البوثي ماث</pre>
+          <button type="button" class="qfa-copy" data-copy="كل كورساتنا مفيدة بطرق مختلفة 
+يشتركو كلهم في الافادة في الاتي:
+1) تنمية الذكاء و مهارة التفكير المنطقي ( نفس المهارة اللي بتنميها الرياضيات)
+2) المهارة نفسها اللي هيكتسبها الطالب من الكورس سواء في قدرته علي صناعه ادوات ذكية او مواقع الكترونية 
+3) بيتعرض الطالب معانا لتحديات عقيلة و معلومات و مشاريع جديدة عليه بتخليه قادر يكتشف مهاراته
+4) بيقدر الطالب من خلالنا تجربة مجال البرمجة و يحدد ميوله من ناحيته , خاصا ان المجال ده اصبح اساسي فكل المجالات
+
+كورس الروبوتات: بيستفيد الطالب التعرف علي السينسورز المختلفة و يقدر يعرف اي حهاز الكتروني شغال ازاي و يقدر بدوره يصنع مشاريع مشابهة
+كورس المواقع الالكترونية: هو مجال عمل لشباب كتير و مجال ممتع جدا و كل يوم بيحصل فيه تطورات و هيكون من المفيد جدا للطالب تعلمه من سن صغير
+كورسات البرمجة : تاسيس قوي لعالم البرمجة و لها نفس التاثير العقلي ل تعلم الرياضيات و البوثي ماث" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="30">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">ابني هيستفاد ايه من الكورس ؟</p>
+          <button type="button" class="qfa-copy" data-copy="ابني هيستفاد ايه من الكورس ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كل كورساتنا مفيدة بطرق مختلفة 
+يشتركو كلهم في الافادة في الاتي:
+1) تنمية الذكاء و مهارة التفكير المنطقي ( نفس المهارة اللي بتنميها الرياضيات)
+2) المهارة نفسها اللي هيكتسبها الطالب من الكورس سواء في قدرته علي صناعه ادوات ذكية او مواقع الكترونية 
+3) بيتعرض الطالب معانا لتحديات عقيلة و معلومات و مشاريع جديدة عليه بتخليه قادر يكتشف مهاراته
+4) بيقدر الطالب من خلالنا تجربة مجال البرمجة و يحدد ميوله من ناحيته , خاصا ان المجال ده اصبح اساسي فكل المجالات
+
+كورس الروبوتات: بيستفيد الطالب التعرف علي السينسورز المختلفة و يقدر يعرف اي حهاز الكتروني شغال ازاي و يقدر بدوره يصنع مشاريع مشابهة
+كورس المواقع الالكترونية: هو مجال عمل لشباب كتير و مجال ممتع جدا و كل يوم بيحصل فيه تطورات و هيكون من المفيد جدا للطالب تعلمه من سن صغير
+كورسات البرمجة : تاسيس قوي لعالم البرمجة و لها نفس التاثير العقلي ل تعلم الرياضيات و البوثي ماث</pre>
+          <button type="button" class="qfa-copy" data-copy="كل كورساتنا مفيدة بطرق مختلفة 
+يشتركو كلهم في الافادة في الاتي:
+1) تنمية الذكاء و مهارة التفكير المنطقي ( نفس المهارة اللي بتنميها الرياضيات)
+2) المهارة نفسها اللي هيكتسبها الطالب من الكورس سواء في قدرته علي صناعه ادوات ذكية او مواقع الكترونية 
+3) بيتعرض الطالب معانا لتحديات عقيلة و معلومات و مشاريع جديدة عليه بتخليه قادر يكتشف مهاراته
+4) بيقدر الطالب من خلالنا تجربة مجال البرمجة و يحدد ميوله من ناحيته , خاصا ان المجال ده اصبح اساسي فكل المجالات
+
+كورس الروبوتات: بيستفيد الطالب التعرف علي السينسورز المختلفة و يقدر يعرف اي حهاز الكتروني شغال ازاي و يقدر بدوره يصنع مشاريع مشابهة
+كورس المواقع الالكترونية: هو مجال عمل لشباب كتير و مجال ممتع جدا و كل يوم بيحصل فيه تطورات و هيكون من المفيد جدا للطالب تعلمه من سن صغير
+كورسات البرمجة : تاسيس قوي لعالم البرمجة و لها نفس التاثير العقلي ل تعلم الرياضيات و البوثي ماث" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="31">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل الاولاد بياخدو الادوات معاهم ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل الاولاد بياخدو الادوات معاهم ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كورس الروبوتات فقط هو الي بيتم فيه استخدام ادوات 
+و الادوات يمكن الحصول عليها فنهاية السيشن بدفع تكلفة الادوات 
+اخذ الادوات او تركها بيكون اختياري</pre>
+          <button type="button" class="qfa-copy" data-copy="كورس الروبوتات فقط هو الي بيتم فيه استخدام ادوات 
+و الادوات يمكن الحصول عليها فنهاية السيشن بدفع تكلفة الادوات 
+اخذ الادوات او تركها بيكون اختياري" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      <article class="qfa-card bg-card" data-id="32">
+        <div class="qfa-row qfa-row--question">
+          <span class="qfa-label">س</span>
+          <p class="qfa-text qfa-text--question">هل الكورس مفيد لابني في البكالوريا ؟</p>
+          <button type="button" class="qfa-copy" data-copy="هل الكورس مفيد لابني في البكالوريا ؟" aria-label="نسخ السؤال">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+        <div class="qfa-row qfa-row--answer">
+          <span class="qfa-label qfa-label--answer">ج</span>
+          <pre class="qfa-text qfa-text--answer">كورس الجافااسكريبت هو نفس منهج البكالرويا المصرية الجديدة و بالتالي تعلمه مفيد جدا لتحديد ميول الطالب اذا كان حابب يختار مواد البرمجة او لا</pre>
+          <button type="button" class="qfa-copy" data-copy="كورس الجافااسكريبت هو نفس منهج البكالرويا المصرية الجديدة و بالتالي تعلمه مفيد جدا لتحديد ميول الطالب اذا كان حابب يختار مواد البرمجة او لا" aria-label="نسخ الجواب">
+            <svg class="qfa-copy__icon qfa-copy__icon--copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="qfa-copy__icon qfa-copy__icon--tick" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </div>
+      </article>
+      </div>
+      <p class="qfa-count">32 عنصر</p>
+    </main>
+
+    <footer class="bg-page-footer">
+      <p><strong class="bg-hero__accent">Mokhtareon</strong> · المخترعون</p>
+      <p style="margin-top: 0.5rem">أداة المشرفين · للاستخدام الداخلي</p>
+    </footer>
+
+    <script>
+      (function () {
+        const COPY_DURATION = 2000;
+
+        async function copyText(text) {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+            return;
+          }
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand("copy");
+          document.body.removeChild(ta);
+        }
+
+        document.querySelectorAll(".qfa-copy").forEach(function (btn) {
+          btn.addEventListener("click", async function () {
+            const text = btn.getAttribute("data-copy");
+            if (!text) return;
+
+            try {
+              await copyText(text);
+              btn.classList.add("is-copied");
+              btn.setAttribute("aria-label", "تم النسخ");
+
+              if (btn._copyTimer) clearTimeout(btn._copyTimer);
+              btn._copyTimer = setTimeout(function () {
+                btn.classList.remove("is-copied");
+                const isQuestion = btn.closest(".qfa-row--question");
+                btn.setAttribute(
+                  "aria-label",
+                  isQuestion ? "نسخ السؤال" : "نسخ الجواب"
+                );
+              }, COPY_DURATION);
+            } catch (err) {
+              console.error("Copy failed:", err);
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
