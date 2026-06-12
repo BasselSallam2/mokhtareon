@@ -111,13 +111,30 @@ body.brand-guidelines.course-wizard-page {
   word-break: break-all;
 }
 
-.cw-explain img {
+.cw-image-frame {
+  margin: 1rem 0;
+}
+
+.cw-image-frame img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 1rem 0;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
+}
+
+.cw-image-fallback {
+  padding: 1rem 1.25rem;
+  color: var(--text-muted);
+  background: rgba(19, 100, 162, 0.06);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.cw-image-fallback a {
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .cw-code {

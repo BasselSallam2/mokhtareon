@@ -81,6 +81,28 @@
     return div.innerHTML;
   }
 
+  function renderImage(src, title) {
+    const safeSrc = escapeHtml(src);
+    const safeTitle = escapeHtml(title || "course image");
+
+    return (
+      '<figure class="cw-image-frame">' +
+      '<img src="' +
+      safeSrc +
+      '" alt="' +
+      safeTitle +
+      '" decoding="async" referrerpolicy="no-referrer" ' +
+      'onerror="this.classList.add(\'cw-hidden\'); this.nextElementSibling.classList.remove(\'cw-hidden\');" />' +
+      '<figcaption class="cw-image-fallback cw-hidden">' +
+      "Course image could not load. " +
+      '<a href="' +
+      safeSrc +
+      '" target="_blank" rel="noopener noreferrer">Open image</a>' +
+      "</figcaption>" +
+      "</figure>"
+    );
+  }
+
   function renderWelcome() {
     els.progressWrap.classList.add("cw-hidden");
     els.actions.classList.remove("cw-hidden");
@@ -117,7 +139,7 @@
   function renderExplain(step) {
     const section = course.sections[step.sectionIndex];
     const explain = section.explain;
-  const sectionNum = step.sectionIndex + 1;
+    const sectionNum = step.sectionIndex + 1;
 
     els.progressWrap.classList.remove("cw-hidden");
     els.actions.classList.remove("cw-hidden");
@@ -141,10 +163,7 @@
 
     if (explain.images && explain.images.length) {
       explain.images.forEach(function (src) {
-        html +=
-          '<img src="' +
-          escapeHtml(src) +
-          '" alt="Course illustration" loading="lazy" />';
+        html += renderImage(src, section.title);
       });
     }
 
@@ -402,12 +421,14 @@
   }
 
   function downloadPdf() {
-    if (!window.jspdf || !window.jspdf.jsPDF) {
-      alert("PDF library is not loaded. Please refresh the page and try again.");
+    const jsPdfNamespace = window.jspdf || window.jsPDF;
+    const jsPDF = jsPdfNamespace && (jsPdfNamespace.jsPDF || jsPdfNamespace);
+
+    if (!jsPDF) {
+      alert("PDF library is still loading. Please wait a moment and try again.");
       return;
     }
 
-    const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ unit: "pt", format: "a4" });
     const margin = 48;
     const pageWidth = doc.internal.pageSize.getWidth();
