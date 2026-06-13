@@ -168,14 +168,14 @@ function detectLanguage() {
     return savedLanguage;
   }
   
-  // Default to Arabic
-  return 'ar';
+  // Default to English
+  return 'en';
 }
 
 // Preserve language when navigating to book.html
 window.preserveLanguage = function(link) {
   // Get current language
-  const currentLang = localStorage.getItem('language') || 'ar';
+  const currentLang = localStorage.getItem('language') || 'en';
   
   // Add language parameter to URL
   const url = new URL(link.href);

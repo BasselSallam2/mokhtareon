@@ -532,7 +532,7 @@ function getCurrentPage() {
 }
 
 function getDefaultLanguage() {
-  return getCurrentPage() === 'partnership' ? 'en' : 'ar';
+  return 'en';
 }
 
 // Function to translate the page

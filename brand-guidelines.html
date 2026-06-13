@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,8 +25,8 @@
         >الهوية البصرية · الإصدار 1.0 · 2026</span
       >
       <div class="bg-lang-toggle" role="group" aria-label="Language">
-        <button type="button" class="active" data-lang="ar" aria-pressed="true">AR</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+        <button type="button" class="active" data-lang="en" aria-pressed="true">EN</button>
       </div>
     </header>
 
@@ -597,6 +597,8 @@
         buttons.forEach((btn) => {
           btn.addEventListener("click", () => setLang(btn.dataset.lang));
         });
+
+        setLang("en");
       })();
     </script>
   </body>

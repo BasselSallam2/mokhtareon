@@ -393,10 +393,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Get the language from URL parameter, localStorage, or default to Arabic
+        // Get the language from URL parameter, localStorage, or default to English
         const urlParams = new URLSearchParams(window.location.search);
         const urlLang = urlParams.get('lang');
-        const currentLang = urlLang || localStorage.getItem('language') || 'ar';
+        const currentLang = urlLang || localStorage.getItem('preferredLanguage') || localStorage.getItem('language') || 'en';
         
         // Set initial language
         // translatePage(currentLang);
