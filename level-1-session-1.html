@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JavaScript Level 1 Session 1 — Introduction to programming. Interactive lessons with instant feedback and a downloadable report." />
+    <meta name="robots" content="index, follow" />
+    <title>JavaScript Level 1 — Session 1 — Mokhtareon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet" />
+    <link rel="icon" href="imgs/Artboard 1 copy.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/brand-guidelines.css" />
+    <link rel="stylesheet" href="css/course-wizard.css" />
+  </head>
+  <body class="brand-guidelines course-wizard-page">
+    <header class="bg-topbar">
+      <div class="bg-topbar__logo">
+        <a href="/">
+          <img src="imgs/image 34.svg" alt="Mokhtareon — المخترعون" />
+        </a>
+      </div>
+      <span class="bg-topbar__meta">JavaScript Level 1 · Session 1</span>
+    </header>
+
+    <section class="bg-hero course-wizard-hero">
+      <div class="bg-hero__inner">
+        <span class="bg-hero__badge">Mokhtareon Course</span>
+        <h1>Session 1 — Introduction to Programming</h1>
+        <p class="bg-hero__tagline">
+          Learn <span class="bg-hero__accent">step by step</span> with interactive lessons and questions
+        </p>
+        <p class="bg-hero__sub">
+          Walk through each section, check your answers, see your score in real time, and download your report.
+        </p>
+      </div>
+    </section>
+
+    <main class="cw-wrap">
+      <article class="bg-card cw-card">
+        <div class="cw-progress" id="cw-progress-wrap">
+          <div class="cw-progress__meta">
+            <span id="cw-progress-label">Step 1 of 1</span>
+            <span id="cw-progress-score">Answered: 0/23 · Correct: 0 · Score: 0%</span>
+          </div>
+          <div class="cw-progress__bar" aria-hidden="true">
+            <div class="cw-progress__fill" id="cw-progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="cw-step-content"></div>
+
+        <div class="cw-actions" id="cw-actions">
+          <button type="button" class="cw-btn cw-btn--secondary cw-hidden" id="cw-btn-back">Back</button>
+          <div class="cw-actions__right">
+            <button type="button" class="cw-btn cw-btn--secondary cw-hidden" id="cw-btn-check">Check Answer</button>
+            <button type="button" class="cw-btn cw-btn--primary" id="cw-btn-next">Start Course</button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bg-page-footer">
+      <p><strong class="bg-hero__accent">Mokhtareon</strong> · المخترعون</p>
+      <p style="margin-top: 0.5rem"><a href="/javascript-level-1">JavaScript Level 1 — All Sessions</a></p>
+      <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.75">© 2026 Mokhtareon. All rights reserved.</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"
+      onerror="var s=document.createElement('script');s.src='https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js';document.head.appendChild(s);"></script>
+    <script src="js/level-1-session-1-data.js"></script>
+    <script src="js/course-wizard.js"></script>
+  </body>
+</html>

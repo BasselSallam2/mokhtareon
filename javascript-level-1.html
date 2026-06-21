@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Interactive JavaScript Level 1 course by Mokhtareon. Learn programming basics step by step with questions and a downloadable report." />
+      content="JavaScript Level 1 course by Mokhtareon. Choose a session — introduction to programming, binary conversion, if conditions, and coding challenges." />
     <meta name="robots" content="index, follow" />
-    <title>JavaScript Level 1 Course — Mokhtareon | المخترعون</title>
+    <title>JavaScript Level 1 — Mokhtareon | المخترعون</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
       rel="stylesheet" />
     <link rel="icon" href="imgs/Artboard 1 copy.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/brand-guidelines.css" />
-    <link rel="stylesheet" href="css/javascript-level-1.css" />
+    <link rel="stylesheet" href="css/course-wizard.css" />
   </head>
   <body class="brand-guidelines course-wizard-page">
     <header class="bg-topbar">
@@ -27,7 +27,7 @@
           <img src="imgs/image 34.svg" alt="Mokhtareon — المخترعون" />
         </a>
       </div>
-      <span class="bg-topbar__meta">JavaScript Level 1 · Interactive Course</span>
+      <span class="bg-topbar__meta">JavaScript Level 1 · Course Hub</span>
     </header>
 
     <section class="bg-hero course-wizard-hero">
@@ -35,33 +35,51 @@
         <span class="bg-hero__badge">Mokhtareon Course</span>
         <h1>JavaScript Level 1</h1>
         <p class="bg-hero__tagline">
-          Learn <span class="bg-hero__accent">step by step</span> with interactive lessons and questions
+          Choose a <span class="bg-hero__accent">session</span> to start learning
         </p>
         <p class="bg-hero__sub">
-          Introduction to programming — walk through each section, answer questions, and download your score report.
+          Interactive lessons with instant feedback, coding challenges, and downloadable score reports.
         </p>
       </div>
     </section>
 
-    <main class="cw-wrap">
-      <article class="bg-card cw-card">
-        <div class="cw-progress" id="cw-progress-wrap">
-          <div class="cw-progress__meta">
-            <span id="cw-progress-label">Step 1 of 1</span>
-            <span id="cw-progress-score">Answered: 0/23 · Correct so far: 0</span>
-          </div>
-          <div class="cw-progress__bar" aria-hidden="true">
-            <div class="cw-progress__fill" id="cw-progress-fill"></div>
-          </div>
-        </div>
+    <main class="cw-wrap cw-wrap--landing">
+      <div class="cw-session-grid">
+        <a href="/level-1-session-1" class="cw-session-card">
+          <span class="cw-session-card__badge">Session 1</span>
+          <h2 class="cw-session-card__title">Introduction to Programming</h2>
+          <p class="cw-session-card__desc">
+            Computer language, running code, console.log, datatypes, operators, and more.
+          </p>
+          <ul class="cw-session-card__meta">
+            <li>23 questions</li>
+            <li>Multiple choice</li>
+            <li>Instant feedback</li>
+          </ul>
+          <span class="cw-session-card__cta">Start Session 1 →</span>
+        </a>
 
-        <div id="cw-step-content"></div>
+        <a href="/level-1-session-2" class="cw-session-card">
+          <span class="cw-session-card__badge">Session 2</span>
+          <h2 class="cw-session-card__title">Binary &amp; if Conditions</h2>
+          <p class="cw-session-card__desc">
+            Convert binary to decimal, then write and test JavaScript code with if conditions.
+          </p>
+          <ul class="cw-session-card__meta">
+            <li>6 questions</li>
+            <li>3 MCQ + 3 coding</li>
+            <li>Run code in browser</li>
+          </ul>
+          <span class="cw-session-card__cta">Start Session 2 →</span>
+        </a>
 
-        <div class="cw-actions" id="cw-actions">
-          <button type="button" class="cw-btn cw-btn--secondary cw-hidden" id="cw-btn-back">Back</button>
-          <button type="button" class="cw-btn cw-btn--primary" id="cw-btn-next">Start Course</button>
-        </div>
-      </article>
+        <article class="cw-session-card cw-session-card--soon" aria-disabled="true">
+          <span class="cw-session-card__badge">Session 3</span>
+          <h2 class="cw-session-card__title">Coming Soon</h2>
+          <p class="cw-session-card__desc">More sessions will be added as the course progresses.</p>
+          <span class="cw-session-card__cta">Not available yet</span>
+        </article>
+      </div>
     </main>
 
     <footer class="bg-page-footer">
@@ -69,11 +87,5 @@
       <p style="margin-top: 0.5rem">JavaScript Level 1 Interactive Course</p>
       <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.75">© 2026 Mokhtareon. All rights reserved.</p>
     </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"
-      onerror="var s=document.createElement('script');s.src='https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js';document.head.appendChild(s);"></script>
-    <script src="js/javascript-level-1-data.js"></script>
-    <script src="js/javascript-level-1.js"></script>
   </body>
 </html>

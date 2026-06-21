@@ -1,6 +1,8 @@
 /* Course content from JavaScript-Course.md */
-window.JAVASCRIPT_LEVEL_1_COURSE = {
-  title: "JavaScript Level 1 - Introduction",
+window.COURSE_WIZARD_DATA = {
+  title: "JavaScript Level 1 - Session 1",
+  pdfPrefix: "level-1-session-1",
+  backUrl: "/javascript-level-1",
   lesson: "Lesson 1 - Introduction to programming",
   sections: [
     {

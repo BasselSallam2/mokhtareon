@@ -18,7 +18,19 @@
   </url>
   <url>
     <loc>https://www.mokhtareon.com/javascript-level-1</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mokhtareon.com/level-1-session-1</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mokhtareon.com/level-1-session-2</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,4 +1,4 @@
-/* JavaScript Level 1 Course Wizard — scoped styles */
+/* Mokhtareon Course Wizard — shared styles */
 
 body.brand-guidelines.course-wizard-page {
   --cw-question-bg: rgba(19, 100, 162, 0.06);
@@ -22,8 +22,18 @@ body.brand-guidelines.course-wizard-page {
   z-index: 2;
 }
 
+.cw-wrap--landing {
+  max-width: 960px;
+}
+
 .cw-card {
   padding: 2rem;
+}
+
+.cw-welcome-lesson {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .cw-progress {
@@ -249,6 +259,135 @@ body.brand-guidelines.course-wizard-page {
   background: rgba(19, 100, 162, 0.08);
 }
 
+.cw-option.is-correct {
+  border-color: #16a34a;
+  background: var(--cw-correct-bg);
+}
+
+.cw-option.is-wrong {
+  border-color: #dc2626;
+  background: var(--cw-wrong-bg);
+}
+
+.cw-feedback {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.cw-feedback--correct {
+  background: var(--cw-correct-bg);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #166534;
+}
+
+.cw-feedback--wrong {
+  background: var(--cw-wrong-bg);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #991b1b;
+}
+
+.cw-solution-label {
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.cw-code-workspace {
+  margin-top: 0.5rem;
+}
+
+.cw-code-editor-label {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.cw-code-editor {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #1e293b;
+  color: #e2e8f0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.cw-code-editor:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(19, 100, 162, 0.15);
+}
+
+.cw-code-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.cw-code-output-wrap {
+  margin-bottom: 0.5rem;
+}
+
+.cw-code-output {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-height: 3rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+  border: 1px solid var(--border);
+}
+
+.cw-test-results {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.cw-test-results table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.cw-test-results th,
+.cw-test-results td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.cw-test-results th {
+  background: rgba(19, 100, 162, 0.08);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cw-test-pass {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.cw-test-fail {
+  color: #dc2626;
+  font-weight: 700;
+}
+
 .cw-actions {
   display: flex;
   justify-content: space-between;
@@ -256,6 +395,13 @@ body.brand-guidelines.course-wizard-page {
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+}
+
+.cw-actions__right {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .cw-btn {
@@ -267,6 +413,9 @@ body.brand-guidelines.course-wizard-page {
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .cw-btn:disabled {
@@ -376,17 +525,104 @@ body.brand-guidelines.course-wizard-page {
   display: none !important;
 }
 
+/* Landing page session cards */
+.cw-session-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.cw-session-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.cw-session-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 8px 24px rgba(19, 100, 162, 0.12);
+}
+
+.cw-session-card--soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cw-session-card__badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.cw-session-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.cw-session-card__desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.cw-session-card__meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cw-session-card__meta li {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(19, 100, 162, 0.08);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.cw-session-card__cta {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 640px) {
   .cw-card {
     padding: 1.25rem;
   }
 
   .cw-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cw-actions__right {
+    margin-left: 0;
     flex-direction: column-reverse;
   }
 
   .cw-btn {
     width: 100%;
-    text-align: center;
   }
 }
