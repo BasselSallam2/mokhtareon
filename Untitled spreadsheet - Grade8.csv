@@ -1,0 +1,167 @@
+Session No.,Content,Course
+1,"Introduction to Roblox Ecosystem
+Install Roblox Studio
+Studio Interface
+Explorer
+Properties
+Toolbox
+Camera Controls
+
+Mini Project
+Build your first room.",Game Development
+2,"Parts
+Anchored
+Collision
+Materials
+Colors
+Shapes
+Grouping
+
+Project
+",
+3,"Models
+Toolbox
+Meshes
+Decals
+Textures
+Lighting
+
+Project
+",
+4,"Terrain Editor
+Mountains
+Rivers
+Trees
+Spawn Points",
+5,"Programming Basics
+
+Scripts
+Local Scripts
+Server Scripts
+print()",
+6,"Variables
+
+Numbers
+
+Strings
+
+Booleans
+
+Comments
+
+Operators",
+7,"Conditions
+
+if
+
+elseif
+
+else
+
+Comparison Operators",
+8,"Loops
+
+for
+
+while
+
+repeat",
+9,"Functions
+
+Parameters
+
+Return",
+10,"Events
+
+Touched
+
+MouseClick
+
+ClickDetector
+
+Mini Project
+
+Magic Door",
+11,"Spawn
+
+Kill Brick
+
+Checkpoint
+
+Respawn",
+12,"Coins
+
+Collectibles
+
+Leaderstats
+
+Score",
+13,"Moving Platforms
+
+TweenService
+
+Animation",
+14,"Speed Pads
+
+Jump Pads
+
+Teleport",
+15,"GUI
+
+Frames
+
+Labels
+
+Buttons",
+16,"Health Bar
+
+Coin Counter
+
+Win Screen
+
+Mini Project
+
+Obstacle Course (Obby)",
+17,"Tables
+
+Arrays
+
+Loops",
+18,"Modules
+
+Functions
+
+Reusable Code",
+19,"Remote Events
+
+Client
+
+Server",
+20,"Debugging
+
+Warnings
+
+Output
+
+Common Errors",
+21,"Game Planning
+
+Draw Map
+
+Objectives",
+22,Build Map,
+23,Programming Mechanics,
+24,"UI
+
+Effects
+
+Sound
+
+Lighting",
+25,"Testing
+
+Fix Bugs
+
+Publish Game
+
+Present Final Project",

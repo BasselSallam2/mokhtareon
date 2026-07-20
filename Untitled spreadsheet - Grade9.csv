@@ -1,0 +1,95 @@
+Session No.,Content,Course
+1,"Installing Python
+VS Code
+print()
+comments",python
+2,"Data Types
+input()
+Type Conversion",
+3,"Math Operators
+Assignment Operators
+Comparison Operators",
+4,"Strings
+String Methods
+f-string",
+5,Mini Project,
+6,"if
+
+else
+
+elif
+
+Project",
+7,"Nested If
+
+Logical Operators
+
+Project",
+8,ATM Machine Simulation,
+9,"for loop
+
+range()
+
+Patterns",
+10,"break
+
+continue",
+11,"Nested loops
+
+Stars Patterns
+
+Number Patterns",
+12,"Functions
+
+Parameters
+
+Return",
+13,"Default Parameters
+
+Local Variables
+
+Global Variables",
+14,Math Library,
+15,"Lists
+
+Index
+
+Slice
+
+Loop through List
+
+Project",
+16,"Tuples
+
+Sets
+
+Dictionary",
+17,"Dictionary Practice
+
+Student Database",
+18,Mini Project,
+19,"Read File
+
+Write File
+
+Append File",
+20,"Try
+
+Except
+
+Finally",
+21,"Class
+
+Object
+
+Attributes
+
+Methods",
+22,"Constructors
+
+Multiple Objects",
+23,"Constructors
+
+Multiple Objects",
+24,Build Final Project,
+25,Build Final Project,
