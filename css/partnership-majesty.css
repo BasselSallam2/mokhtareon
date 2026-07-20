@@ -133,24 +133,9 @@ ul {
   object-fit: contain;
 }
 
-.mj-hero__logo--mokhtareon {
-  padding: 1.25rem 2rem;
-  border-radius: 18px;
-  background: var(--mj-white);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-}
-
 .mj-hero__logo--mokhtareon img {
   height: clamp(88px, 14vw, 128px);
   max-width: min(320px, 78vw);
-}
-
-.mj-hero__logo--school {
-  padding: 1.25rem 1.75rem;
-  border-radius: 18px;
-  background: linear-gradient(165deg, #0a0a0a 0%, #1c1c1c 48%, #0d0d0d 100%);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .mj-hero__logo--school img {
@@ -174,11 +159,6 @@ ul {
 
   .mj-hero__partners-divider {
     transform: none;
-  }
-
-  .mj-hero__logo--mokhtareon,
-  .mj-hero__logo--school {
-    width: min(100%, 340px);
   }
 
   .mj-hero__logo--mokhtareon img {
