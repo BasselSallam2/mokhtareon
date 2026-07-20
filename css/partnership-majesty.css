@@ -311,6 +311,10 @@ ul {
   .mj-terms__card--wide {
     grid-column: span 3;
   }
+
+  .mj-terms__card--span-2 {
+    grid-column: span 2;
+  }
 }
 
 .mj-terms__card {
