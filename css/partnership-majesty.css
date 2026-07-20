@@ -111,6 +111,43 @@ ul {
   z-index: 1;
 }
 
+.mj-hero__partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.mj-hero__logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 14px;
+  background: var(--mj-white);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.mj-hero__logo-card img {
+  height: 52px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.mj-hero__logo-card--school img {
+  height: 72px;
+  max-width: 88px;
+}
+
+.mj-hero__partners-divider {
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.65);
+}
+
 .mj-eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
@@ -125,7 +162,7 @@ ul {
 }
 
 .mj-hero h1 {
-  max-width: 18ch;
+  max-width: 22ch;
   font-size: clamp(1.85rem, 4vw, 2.75rem);
   font-weight: 800;
   line-height: 1.2;
