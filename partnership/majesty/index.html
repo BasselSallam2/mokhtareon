@@ -171,8 +171,8 @@
             <span class="mj-label">Curriculum Overview</span>
             <h2>What students learn by grade</h2>
             <p>
-              Select a grade to review modules and session topics. The pathway covers Grades 1–10
-              and Grade 12.
+              Select a grade to review the annual pathway. Each table summarizes modules, session
+              counts, and learning focus for Grades 1–10 and Grade 12.
             </p>
           </div>
 
@@ -281,105 +281,142 @@
       <p class="mj-footer__copy">&copy; 2026 Mokhtareon Academy. All rights reserved.</p>
     </footer>
 
-    <script src="curriculum-data.js"></script>
+    <script src="/partnership/majesty/curriculum-data.js"></script>
     <script>
       (function () {
-        const data = window.MAJESTY_CURRICULUM || {};
-        const gradeOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12"];
-        const tabsEl = document.getElementById("gradeTabs");
-        const panelsEl = document.getElementById("curriculumPanels");
+        function initCurriculum() {
+          const data = window.MAJESTY_CURRICULUM || {};
+          const gradeOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12"];
+          const tabsEl = document.getElementById("gradeTabs");
+          const panelsEl = document.getElementById("curriculumPanels");
+          if (!tabsEl || !panelsEl) return;
 
-        function countSessions(modules) {
-          return modules.reduce(function (total, mod) {
-            return (
-              total +
-              mod.sessions.reduce(function (sum, s) {
-                const match = /\((\d+) sessions\)/.exec(s);
-                return sum + (match ? parseInt(match[1], 10) : 1);
-              }, 0)
-            );
-          }, 0);
-        }
-
-        function renderGrade(gradeId, activate) {
-          const grade = data[gradeId];
-          if (!grade) return;
-
-          document.querySelectorAll(".mj-grade-tab").forEach(function (btn) {
-            const isActive = btn.dataset.grade === gradeId;
-            btn.classList.toggle("is-active", isActive);
-            btn.setAttribute("aria-selected", isActive ? "true" : "false");
+          const available = gradeOrder.filter(function (id) {
+            return data[id];
           });
-
-          let panel = document.getElementById("panel-" + gradeId);
-          if (!panel) {
-            panel = document.createElement("div");
-            panel.className = "mj-curriculum-panel";
-            panel.id = "panel-" + gradeId;
-            panel.setAttribute("role", "tabpanel");
-            panel.setAttribute("aria-labelledby", "tab-" + gradeId);
-
-            const sessionTotal = countSessions(grade.modules);
-            const modulesHtml = grade.modules
-              .map(function (mod) {
-                const items = mod.sessions
-                  .map(function (s) {
-                    return "<li>" + s + "</li>";
-                  })
-                  .join("");
-                return (
-                  '<div class="mj-module">' +
-                  '<h4 class="mj-module__title">' +
-                  mod.name +
-                  "</h4>" +
-                  '<ol class="mj-module__sessions">' +
-                  items +
-                  "</ol>" +
-                  "</div>"
-                );
-              })
-              .join("");
-
-            panel.innerHTML =
-              '<div class="mj-curriculum-panel__meta">' +
-              "<h3>" +
-              grade.label +
-              "</h3>" +
-              "<span>" +
-              grade.summary +
-              " · " +
-              sessionTotal +
-              " sessions</span>" +
-              "</div>" +
-              modulesHtml;
-
-            panelsEl.appendChild(panel);
+          if (!available.length) {
+            panelsEl.innerHTML =
+              '<p class="mj-curriculum-error">Curriculum data could not be loaded. Please refresh the page.</p>';
+            return;
           }
 
-          document.querySelectorAll(".mj-curriculum-panel").forEach(function (p) {
-            p.hidden = p.id !== "panel-" + gradeId;
+          function escapeHtml(value) {
+            return String(value)
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;");
+          }
+
+          function sessionTotal(modules) {
+            return modules.reduce(function (sum, mod) {
+              return sum + (mod.sessions || 0);
+            }, 0);
+          }
+
+          function renderGrade(gradeId) {
+            const grade = data[gradeId];
+            if (!grade) return;
+
+            document.querySelectorAll(".mj-grade-tab").forEach(function (btn) {
+              const isActive = btn.dataset.grade === gradeId;
+              btn.classList.toggle("is-active", isActive);
+              btn.setAttribute("aria-selected", isActive ? "true" : "false");
+            });
+
+            let panel = document.getElementById("panel-" + gradeId);
+            if (!panel) {
+              panel = document.createElement("div");
+              panel.className = "mj-curriculum-panel";
+              panel.id = "panel-" + gradeId;
+              panel.setAttribute("role", "tabpanel");
+              panel.setAttribute("aria-labelledby", "tab-" + gradeId);
+
+              const total = sessionTotal(grade.modules);
+              const rows = grade.modules
+                .map(function (mod) {
+                  const topics = (mod.topics || [])
+                    .map(function (topic) {
+                      return "<li>" + escapeHtml(topic) + "</li>";
+                    })
+                    .join("");
+                  return (
+                    "<tr>" +
+                    "<td><strong>" +
+                    escapeHtml(mod.name) +
+                    "</strong></td>" +
+                    '<td class="mj-table__sessions">' +
+                    escapeHtml(mod.sessions) +
+                    "</td>" +
+                    '<td><ul class="mj-table__topics">' +
+                    topics +
+                    "</ul></td>" +
+                    "</tr>"
+                  );
+                })
+                .join("");
+
+              panel.innerHTML =
+                '<div class="mj-curriculum-panel__meta">' +
+                "<div>" +
+                "<h3>" +
+                escapeHtml(grade.label) +
+                "</h3>" +
+                '<p class="mj-curriculum-panel__focus">' +
+                escapeHtml(grade.focus) +
+                "</p>" +
+                "</div>" +
+                '<span class="mj-curriculum-panel__total">' +
+                total +
+                " sessions</span>" +
+                "</div>" +
+                '<div class="mj-table-wrap">' +
+                '<table class="mj-table">' +
+                "<thead><tr>" +
+                "<th scope=\"col\">Module</th>" +
+                "<th scope=\"col\">Sessions</th>" +
+                "<th scope=\"col\">Learning focus</th>" +
+                "</tr></thead>" +
+                "<tbody>" +
+                rows +
+                "</tbody></table></div>";
+
+              panelsEl.appendChild(panel);
+            }
+
+            document.querySelectorAll(".mj-curriculum-panel").forEach(function (p) {
+              p.hidden = p.id !== "panel-" + gradeId;
+            });
+          }
+
+          available.forEach(function (gradeId, index) {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "mj-grade-tab" + (index === 0 ? " is-active" : "");
+            btn.id = "tab-" + gradeId;
+            btn.dataset.grade = gradeId;
+            btn.setAttribute("role", "tab");
+            btn.setAttribute("aria-selected", index === 0 ? "true" : "false");
+            btn.setAttribute("aria-controls", "panel-" + gradeId);
+            btn.textContent = "Grade " + gradeId;
+            btn.addEventListener("click", function () {
+              renderGrade(gradeId);
+            });
+            tabsEl.appendChild(btn);
           });
+
+          renderGrade(available[0]);
         }
 
-        gradeOrder.forEach(function (gradeId, index) {
-          if (!data[gradeId]) return;
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "mj-grade-tab" + (index === 0 ? " is-active" : "");
-          btn.id = "tab-" + gradeId;
-          btn.dataset.grade = gradeId;
-          btn.setAttribute("role", "tab");
-          btn.setAttribute("aria-selected", index === 0 ? "true" : "false");
-          btn.setAttribute("aria-controls", "panel-" + gradeId);
-          btn.textContent = "Grade " + gradeId;
-          btn.addEventListener("click", function () {
-            renderGrade(gradeId, true);
-          });
-          tabsEl.appendChild(btn);
-        });
-
-        if (gradeOrder.length) {
-          renderGrade(gradeOrder[0], true);
+        if (window.MAJESTY_CURRICULUM) {
+          initCurriculum();
+        } else {
+          // Fallback if the root-absolute script path failed (e.g. local file:// open)
+          const fallback = document.createElement("script");
+          fallback.src = "curriculum-data.js";
+          fallback.onload = initCurriculum;
+          fallback.onerror = initCurriculum;
+          document.head.appendChild(fallback);
         }
       })();
     </script>

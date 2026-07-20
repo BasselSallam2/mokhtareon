@@ -1,384 +1,330 @@
+/**
+ * Majesty partnership — professional curriculum overviews.
+ * Written for proposal presentation (not raw session notes).
+ */
 window.MAJESTY_CURRICULUM = {
   "1": {
-    "label": "Grade 1",
-    "modules": [
+    label: "Grade 1",
+    focus:
+      "A gentle introduction to computers, hands-on electronics, and creative block coding with Scratch Jr.",
+    modules: [
       {
-        "name": "Computer Basics",
-        "sessions": [
-          "Mouse training (2 sessions)",
-          "Keyboard training (4 sessions)"
-        ]
+        name: "Computer Basics",
+        sessions: 6,
+        topics: [
+          "Mouse control and classroom computer habits",
+          "Keyboard familiarity and typing foundations",
+        ],
       },
       {
-        "name": "Electronics PC Lab",
-        "sessions": [
-          "Electronics basics (8 sessions)"
-        ]
+        name: "Electronics Lab",
+        sessions: 14,
+        topics: [
+          "Safe exploration of basic electronic components",
+          "Simple circuits and guided lab activities",
+        ],
       },
       {
-        "name": "Electronics",
-        "sessions": [
-          "Electronics basics (6 sessions)"
-        ]
+        name: "Scratch Jr",
+        sessions: 5,
+        topics: [
+          "Storytelling with characters and scenes",
+          "First sequencing and event-based coding concepts",
+        ],
       },
-      {
-        "name": "Scratch Jr",
-        "sessions": [
-          "Scratch Jr basics (5 sessions)"
-        ]
-      }
     ],
-    "summary": "Computer Basics · Electronics PC Lab · Electronics · Scratch Jr"
   },
   "2": {
-    "label": "Grade 2",
-    "modules": [
+    label: "Grade 2",
+    focus:
+      "Stronger computer confidence, deeper electronics practice, and a full introduction to Scratch.",
+    modules: [
       {
-        "name": "Computer Basics",
-        "sessions": [
-          "Mouse training",
-          "Keyboard training (2 sessions)"
-        ]
+        name: "Computer Basics",
+        sessions: 3,
+        topics: [
+          "Mouse and keyboard fluency",
+          "Ready-to-learn classroom workstation skills",
+        ],
       },
       {
-        "name": "Electronics PC Lab",
-        "sessions": [
-          "Electronics basics (6 sessions)"
-        ]
+        name: "Electronics Lab",
+        sessions: 12,
+        topics: [
+          "Building and testing simple circuits",
+          "Hands-on electronics discovery in the school lab",
+        ],
       },
       {
-        "name": "Electronics Lab",
-        "sessions": [
-          "Electronics basics (6 sessions)"
-        ]
+        name: "Scratch",
+        sessions: 10,
+        topics: [
+          "Sprites, motion, looks, and events",
+          "Creating short interactive stories and games",
+        ],
       },
-      {
-        "name": "Scratch",
-        "sessions": [
-          "Scratch basics (10 sessions)"
-        ]
-      }
     ],
-    "summary": "Computer Basics · Electronics PC Lab · Electronics Lab · Scratch"
   },
   "3": {
-    "label": "Grade 3",
-    "modules": [
+    label: "Grade 3",
+    focus:
+      "Structured Scratch programming followed by an introduction to AI concepts through PictoBlox.",
+    modules: [
       {
-        "name": "Scratch",
-        "sessions": [
-          "Introduction to Programming & Scratch Interface",
-          "Motion Blocks (Move, Turn, Go to)",
-          "Looks Blocks (Say, Think, Costumes)",
-          "Events Blocks (When Clicked, Key Press)",
-          "Sound Blocks",
-          "Variables (Score & Lives)",
-          "Operators (+,-,Random,Compare)",
-          "If & If Else",
-          "Repeat Loop",
-          "Forever Loop",
-          "Broadcast Messages",
-          "Cloning",
-          "Lists (Simple)",
-          "Functions (My Blocks)",
-          "Final Scratch Project"
-        ]
+        name: "Scratch Programming",
+        sessions: 15,
+        topics: [
+          "Core programming logic: variables, conditions, and loops",
+          "Broadcasts, cloning, lists, and custom blocks",
+          "Capstone Scratch project",
+        ],
       },
       {
-        "name": "PictoBlox",
-        "sessions": [
-          "Introduction to PictoBlox & Stage Mode",
-          "Advanced Animation",
-          "Text To Speech Extension",
-          "Speech Recognition",
-          "Face Detection (Camera)",
-          "Object Detection",
-          "AI Image Classification",
-          "Simple Machine Learning Model",
-          "Interactive AI Game",
-          "Final Graduation Project"
-        ]
-      }
+        name: "PictoBlox & Early AI",
+        sessions: 10,
+        topics: [
+          "Animation, speech, and camera-based interactions",
+          "Face detection, object detection, and image classification",
+          "Simple machine-learning models and an AI game project",
+        ],
+      },
     ],
-    "summary": "Scratch · PictoBlox"
   },
   "4": {
-    "label": "Grade 4",
-    "modules": [
+    label: "Grade 4",
+    focus:
+      "An advanced Scratch year focused on game systems, clean coding habits, and a graduation project.",
+    modules: [
       {
-        "name": "Scratch",
-        "sessions": [
-          "What is Programming? - Scratch Interface - Stage - Sprites - Motion Blocks",
-          "Motion Blocks (Move, Turn, Go to, Glide)",
-          "Looks Blocks (Say, Think, Costumes, Size)",
-          "Events Blocks (Green Flag, Key Press, Mouse Click)",
-          "Sound Blocks + Backdrops",
-          "Coordinates (X & Y)",
-          "Variables (Create Score)",
-          "Operators (Math & Random)",
-          "If Condition",
-          "If Else",
-          "Repeat Loop",
-          "Forever Loop",
-          "Nested Loops",
-          "Pen Extension",
-          "Mini Project",
-          "Broadcast Messages",
-          "Clone Blocks",
-          "Timer Block",
-          "Lives System",
-          "Level System",
-          "Lists",
-          "My Blocks (Functions)",
-          "Debugging & Code Optimization",
-          "Final Project Planning",
-          "Final Graduation Project"
-        ]
-      }
+        name: "Advanced Scratch",
+        sessions: 25,
+        topics: [
+          "Motion, coordinates, variables, operators, and control flow",
+          "Game design systems: lives, levels, timers, and cloning",
+          "Lists, custom functions, debugging, and optimization",
+          "Final project planning and graduation showcase",
+        ],
+      },
     ],
-    "summary": "Scratch"
   },
   "5": {
-    "label": "Grade 5",
-    "modules": [
+    label: "Grade 5",
+    focus:
+      "A complete beginner web track: HTML structure, CSS design, and interactive JavaScript projects.",
+    modules: [
       {
-        "name": "HTML",
-        "sessions": [
-          "What is Internet? · What is Website? · Browser vs Server · First HTML Page · VS Code · Live Server",
-          "Headings · Paragraphs · Bold · Italic · Line Break · Comments",
-          "Images · Links · Lists · Emojis",
-          "Tables",
-          "Forms · Inputs · Buttons · Labels",
-          "Semantic HTML · Header · Main · Footer · Section",
-          "Project"
-        ]
+        name: "HTML",
+        sessions: 7,
+        topics: [
+          "How the web works and creating the first web page",
+          "Text, media, links, lists, tables, and forms",
+          "Semantic page structure and a mini website project",
+        ],
       },
       {
-        "name": "CSS",
-        "sessions": [
-          "Introduction to CSS · Inline · Internal · External",
-          "Colors · Background · Borders · Fonts",
-          "Margin · Padding · Width · Height",
-          "Flexbox Basics",
-          "Buttons · Hover · Transitions",
-          "Cards · Shadows · Rounded Corners",
-          "Responsive Design · Media Queries",
-          "Project"
-        ]
+        name: "CSS",
+        sessions: 8,
+        topics: [
+          "Styling methods, colors, typography, and spacing",
+          "Flexbox, buttons, cards, and visual polish",
+          "Responsive layout with media queries",
+        ],
       },
       {
-        "name": "JavaScript",
-        "sessions": [
-          "Introduction to JavaScript · Variables · Alert() · Console.log()",
-          "Buttons · Events · Functions",
-          "if Statement · Comparison",
-          "Loops · for · while",
-          "Arrays",
-          "DOM · getElementById · querySelector",
-          "Random · Math",
-          "Full Project (3 sessions)"
-        ]
-      }
+        name: "JavaScript",
+        sessions: 10,
+        topics: [
+          "Variables, events, functions, and conditions",
+          "Loops, arrays, and DOM interaction",
+          "Math utilities and a full interactive project",
+        ],
+      },
     ],
-    "summary": "HTML · CSS · JavaScript"
   },
   "6": {
-    "label": "Grade 6",
-    "modules": [
+    label: "Grade 6",
+    focus:
+      "Electronics foundations, a Scratch refresher, and a full Arduino robotics pathway with sensors and actuators.",
+    modules: [
       {
-        "name": "Electronics",
-        "sessions": [
-          "Electronics basics (4 sessions)"
-        ]
+        name: "Electronics Foundations",
+        sessions: 4,
+        topics: ["Circuit basics and safe lab practice"],
       },
       {
-        "name": "Scratch Basics",
-        "sessions": [
-          "Scratch basics (4 sessions)"
-        ]
+        name: "Scratch Refresh",
+        sessions: 4,
+        topics: ["Quick programming review before hardware work"],
       },
       {
-        "name": "Arduino",
-        "sessions": [
-          "Digital signals",
-          "Digital Sensors",
-          "Analog Signals",
-          "Analog Sensors",
-          "Motor Driver",
-          "LCD",
-          "Ultrasonic",
-          "Servo",
-          "Keypad",
-          "Projects (8 sessions)"
-        ]
-      }
+        name: "Arduino & Physical Computing",
+        sessions: 17,
+        topics: [
+          "Digital and analog signals and sensors",
+          "Motor drivers, LCD displays, ultrasonic sensors, and servos",
+          "Keypad input and multi-session applied projects",
+        ],
+      },
     ],
-    "summary": "Electronics · Scratch Basics · Arduino"
   },
   "7": {
-    "label": "Grade 7",
-    "modules": [
+    label: "Grade 7",
+    focus:
+      "Electronics and Arduino continue in depth, then students begin text-based programming with C++.",
+    modules: [
       {
-        "name": "Electronics",
-        "sessions": [
-          "Electronics basics (4 sessions)"
-        ]
+        name: "Electronics Foundations",
+        sessions: 4,
+        topics: ["Reinforced electronics concepts for project work"],
       },
       {
-        "name": "Arduino",
-        "sessions": [
-          "Digital signals",
-          "Digital Sensors",
-          "Analog Signals",
-          "Analog Sensors",
-          "Motor Driver",
-          "LCD",
-          "Ultrasonic",
-          "Servo",
-          "Keypad"
-        ]
+        name: "Arduino Systems",
+        sessions: 9,
+        topics: [
+          "Sensors, actuators, displays, and input devices",
+          "Integrated hardware control projects",
+        ],
       },
       {
-        "name": "C++",
-        "sessions": [
-          "IDE · Install compiler",
-          "Syntax · Console · Variable · Data Types · Input · Output",
-          "Operators · Conditions",
-          "Loops",
-          "Functions",
-          "Arrays",
-          "Strings · 2D Arrays",
-          "Project (5 sessions)"
-        ]
-      }
+        name: "Introduction to C++",
+        sessions: 12,
+        topics: [
+          "Development environment, syntax, variables, and data types",
+          "Operators, conditions, loops, and functions",
+          "Arrays, strings, and applied coding projects",
+        ],
+      },
     ],
-    "summary": "Electronics · Arduino · C++"
   },
   "8": {
-    "label": "Grade 8",
-    "modules": [
+    label: "Grade 8",
+    focus:
+      "A full game-development year in Roblox Studio — from world building and Lua scripting to publishing a finished game.",
+    modules: [
       {
-        "name": "Game Development (Roblox)",
-        "sessions": [
-          "Introduction to Roblox Ecosystem · Install Roblox Studio · Studio Interface · Explorer · Properties · Toolbox · Camera Controls · Mini Project · Build your first room.",
-          "Parts · Anchored · Collision · Materials · Colors · Shapes · Grouping · Project",
-          "Models · Toolbox · Meshes · Decals · Textures · Lighting · Project",
-          "Terrain Editor · Mountains · Rivers · Trees · Spawn Points",
-          "Programming Basics · Scripts · Local Scripts · Server Scripts · Print()",
-          "Variables · Numbers · Strings · Booleans · Comments · Operators",
-          "Conditions · if · Elseif · else · Comparison Operators",
-          "Loops · for · while · Repeat",
-          "Functions · Parameters · Return",
-          "Events · Touched · MouseClick · ClickDetector · Mini Project · Magic Door",
-          "Spawn · Kill Brick · Checkpoint · Respawn",
-          "Coins · Collectibles · Leaderstats · Score",
-          "Moving Platforms · TweenService · Animation",
-          "Speed Pads · Jump Pads · Teleport",
-          "GUI · Frames · Labels · Buttons",
-          "Health Bar · Coin Counter · Win Screen · Mini Project · Obstacle Course (Obby)",
-          "Tables · Arrays · Loops",
-          "Modules · Functions · Reusable Code",
-          "Remote Events · Client · Server",
-          "Debugging · Warnings · Output · Common Errors",
-          "Game Planning · Draw Map · Objectives",
-          "Build Map",
-          "Programming Mechanics",
-          "UI · Effects · Sound · Lighting",
-          "Testing · Fix Bugs · Publish Game · Present Final Project"
-        ]
-      }
+        name: "Roblox Studio & World Building",
+        sessions: 4,
+        topics: [
+          "Studio interface, parts, models, materials, and terrain",
+          "Lighting, spawn points, and first playable spaces",
+        ],
+      },
+      {
+        name: "Lua Programming for Games",
+        sessions: 12,
+        topics: [
+          "Scripts, variables, conditions, loops, and functions",
+          "Events, collectibles, checkpoints, and movement systems",
+          "GUI elements, tables, modules, and client–server communication",
+        ],
+      },
+      {
+        name: "Capstone Game Project",
+        sessions: 9,
+        topics: [
+          "Game design planning, map building, and core mechanics",
+          "UI, effects, sound, testing, and publishing",
+          "Final presentation of the student game",
+        ],
+      },
     ],
-    "summary": "Game Development (Roblox)"
   },
   "9": {
-    "label": "Grade 9",
-    "modules": [
+    label: "Grade 9",
+    focus:
+      "A rigorous Python programming course covering core language skills, data structures, files, OOP, and a final project.",
+    modules: [
       {
-        "name": "Python",
-        "sessions": [
-          "Installing Python · VS Code · Print() · Comments",
-          "Data Types · Input() · Type Conversion",
-          "Math Operators · Assignment Operators · Comparison Operators",
-          "Strings · String Methods · F-string",
-          "Mini Project",
-          "if · else · elif · Project",
-          "Nested If · Logical Operators · Project",
-          "ATM Machine Simulation",
-          "For loop · Range() · Patterns",
-          "Break · Continue",
-          "Nested loops · Stars Patterns · Number Patterns",
-          "Functions · Parameters · Return",
-          "Default Parameters · Local Variables · Global Variables",
-          "Math Library",
-          "Lists · Index · Slice · Loop through List · Project",
-          "Tuples · Sets · Dictionary",
-          "Dictionary Practice · Student Database",
-          "Mini Project",
-          "Read File · Write File · Append File",
-          "Try · Except · Finally",
-          "Class · Object · Attributes · Methods",
-          "Constructors · Multiple Objects (2 sessions)",
-          "Build Final Project (2 sessions)"
-        ]
-      }
+        name: "Python Foundations",
+        sessions: 8,
+        topics: [
+          "Environment setup, data types, operators, and strings",
+          "Conditionals, logical operators, and applied mini projects",
+          "ATM-style simulation and control-flow practice",
+        ],
+      },
+      {
+        name: "Intermediate Python",
+        sessions: 10,
+        topics: [
+          "Loops, patterns, functions, and scope",
+          "Lists, tuples, sets, and dictionaries",
+          "File handling and error handling",
+        ],
+      },
+      {
+        name: "Object-Oriented Python & Capstone",
+        sessions: 7,
+        topics: [
+          "Classes, objects, attributes, methods, and constructors",
+          "Final project design, build, and presentation",
+        ],
+      },
     ],
-    "summary": "Python"
   },
   "10": {
-    "label": "Grade 10",
-    "modules": [
+    label: "Grade 10",
+    focus:
+      "Competitive programming with C++, preparing students for olympiad-style contests such as ECPC and ICPC.",
+    modules: [
       {
-        "name": "C++ (ECPC & ICPC)",
-        "sessions": [
-          "IDE · Install compiler",
-          "Syntax · Console · Variable · Data Types · Input · Output",
-          "Operators · Conditions",
-          "Loops",
-          "Functions",
-          "Arrays",
-          "Strings · 2D Arrays",
-          "2D Arrays",
-          "Pointers",
-          "Vector · Pair · Map · Set · Queue · Stack",
-          "Problem Solving (2 sessions)",
-          "Algorithms",
-          "Sorting · Binary Search · Two Pointers · Prefix Sum · Frequency Array · Sliding Window",
-          "Data Structures (3 sessions)",
-          "Advanced Algorithms (3 sessions)",
-          "Competition preparation"
-        ]
-      }
+        name: "C++ Language Core",
+        sessions: 9,
+        topics: [
+          "Toolchain setup, syntax, I/O, and data types",
+          "Operators, conditions, loops, and functions",
+          "Arrays, strings, multidimensional arrays, and pointers",
+        ],
+      },
+      {
+        name: "STL & Problem Solving",
+        sessions: 4,
+        topics: [
+          "Vectors, pairs, maps, sets, queues, and stacks",
+          "Structured problem-solving practice",
+        ],
+      },
+      {
+        name: "Algorithms & Contest Preparation",
+        sessions: 8,
+        topics: [
+          "Sorting, binary search, two pointers, and prefix sums",
+          "Frequency arrays, sliding window, and core data structures",
+          "Advanced algorithms and contest readiness",
+        ],
+      },
     ],
-    "summary": "C++ (ECPC & ICPC)"
   },
   "12": {
-    "label": "Grade 12",
-    "modules": [
+    label: "Grade 12",
+    focus:
+      "A career-oriented backend track covering programming foundations, Node.js APIs, databases, security, deployment, and DevOps basics.",
+    modules: [
       {
-        "name": "Backend (Node.js) & DevOps",
-        "sessions": [
-          "What is a compiler · Syntax · IDE · Hello world · Variables · Operators",
-          "Binary · Conditions · Loops",
-          "Continue Loops",
-          "Arrays · Break · Continue",
-          "Functions · Objects",
-          "OOP — Part 1",
-          "OOP — Part 2",
-          "Databases — Part 1",
-          "Databases — Part 2",
-          "Node.js · Async · Await · DB ORM",
-          "API · Backend folder instractions · Routers · Controllers",
-          "Build first endpoint",
-          "Middleware · Authentication · Authorization",
-          "Validation · ENV",
-          "GitHub",
-          "Deployment",
-          "Web Security",
-          "DevOps overview (2 sessions)",
-          "Graduation Project"
-        ]
-      }
+        name: "Programming & OOP Foundations",
+        sessions: 7,
+        topics: [
+          "Syntax, control flow, arrays, functions, and objects",
+          "Object-oriented programming principles",
+        ],
+      },
+      {
+        name: "Databases & Node.js Backend",
+        sessions: 7,
+        topics: [
+          "Database fundamentals and ORM usage",
+          "Async JavaScript, API design, routers, and controllers",
+          "Middleware, authentication, authorization, and validation",
+        ],
+      },
+      {
+        name: "Deployment, Security & Capstone",
+        sessions: 6,
+        topics: [
+          "GitHub workflows, deployment, and web security essentials",
+          "DevOps overview and graduation project delivery",
+        ],
+      },
     ],
-    "summary": "Backend (Node.js) & DevOps"
-  }
+  },
 };
