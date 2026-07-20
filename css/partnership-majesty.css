@@ -115,37 +115,81 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 1.25rem;
-  margin-bottom: 1.75rem;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
-.mj-hero__logo-card {
+.mj-hero__logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.65rem 1rem;
-  border-radius: 14px;
-  background: var(--mj-white);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
 }
 
-.mj-hero__logo-card img {
-  height: 52px;
+.mj-hero__logo img {
+  display: block;
   width: auto;
-  max-width: 180px;
   object-fit: contain;
 }
 
-.mj-hero__logo-card--school img {
-  height: 72px;
-  max-width: 88px;
+.mj-hero__logo--mokhtareon {
+  padding: 1.25rem 2rem;
+  border-radius: 18px;
+  background: var(--mj-white);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.mj-hero__logo--mokhtareon img {
+  height: clamp(88px, 14vw, 128px);
+  max-width: min(320px, 78vw);
+}
+
+.mj-hero__logo--school {
+  padding: 1.25rem 1.75rem;
+  border-radius: 18px;
+  background: linear-gradient(165deg, #0a0a0a 0%, #1c1c1c 48%, #0d0d0d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mj-hero__logo--school img {
+  height: clamp(120px, 20vw, 200px);
+  max-width: min(220px, 55vw);
 }
 
 .mj-hero__partners-divider {
-  font-size: 1.75rem;
+  flex-shrink: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 300;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 640px) {
+  .mj-hero__partners {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mj-hero__partners-divider {
+    transform: none;
+  }
+
+  .mj-hero__logo--mokhtareon,
+  .mj-hero__logo--school {
+    width: min(100%, 340px);
+  }
+
+  .mj-hero__logo--mokhtareon img {
+    height: 96px;
+    max-width: 100%;
+  }
+
+  .mj-hero__logo--school img {
+    height: 160px;
+    max-width: 100%;
+  }
 }
 
 .mj-eyebrow {
@@ -162,7 +206,7 @@ ul {
 }
 
 .mj-hero h1 {
-  max-width: 22ch;
+  max-width: none;
   font-size: clamp(1.85rem, 4vw, 2.75rem);
   font-weight: 800;
   line-height: 1.2;
