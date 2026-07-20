@@ -199,31 +199,31 @@ window.MAJESTY_CURRICULUM = {
   "8": {
     label: "Grade 8",
     focus:
-      "A full game-development year in Roblox Studio — from world building and Lua scripting to publishing a finished game.",
+      "A full game-development year in Godot — from the editor and scenes to GDScript, gameplay systems, and a published student game.",
     modules: [
       {
-        name: "Roblox Studio & World Building",
+        name: "Godot Editor & World Building",
         sessions: 4,
         topics: [
-          "Studio interface, parts, models, materials, and terrain",
-          "Lighting, spawn points, and first playable spaces",
+          "Godot interface, nodes, scenes, and the scene tree",
+          "Sprites, tilemaps, cameras, lighting, and first playable levels",
         ],
       },
       {
-        name: "Lua Programming for Games",
+        name: "GDScript for Games",
         sessions: 12,
         topics: [
-          "Scripts, variables, conditions, loops, and functions",
-          "Events, collectibles, checkpoints, and movement systems",
-          "GUI elements, tables, modules, and client–server communication",
+          "Variables, signals, conditions, loops, and functions",
+          "Player movement, collisions, collectibles, and checkpoints",
+          "UI controls, arrays/dictionaries, reusable scripts, and scene communication",
         ],
       },
       {
         name: "Capstone Game Project",
         sessions: 9,
         topics: [
-          "Game design planning, map building, and core mechanics",
-          "UI, effects, sound, testing, and publishing",
+          "Game design planning, level building, and core mechanics",
+          "UI, effects, audio, testing, and export",
           "Final presentation of the student game",
         ],
       },
