@@ -29,7 +29,8 @@ html {
   font-size: 16px;
 }
 
-body.majesty-page {
+body.majesty-page,
+body.novara-page {
   font-family: var(--mj-font);
   background: var(--mj-bg);
   color: var(--mj-text);
@@ -143,6 +144,12 @@ ul {
   max-width: min(220px, 55vw);
 }
 
+.mj-hero__logo--novara img {
+  height: clamp(140px, 24vw, 220px);
+  max-width: min(280px, 70vw);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.25));
+}
+
 .mj-hero__partners-divider {
   flex-shrink: 0;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -168,6 +175,11 @@ ul {
 
   .mj-hero__logo--school img {
     height: 160px;
+    max-width: 100%;
+  }
+
+  .mj-hero__logo--novara img {
+    height: 180px;
     max-width: 100%;
   }
 }
@@ -543,6 +555,17 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     align-items: stretch;
   }
+
+  .mj-pricing--single {
+    grid-template-columns: minmax(0, 480px);
+    justify-content: center;
+  }
+}
+
+.mj-curriculum-panel__slot-note {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--mj-text-muted);
 }
 
 .mj-discount-banner {
